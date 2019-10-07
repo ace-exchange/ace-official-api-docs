@@ -34,10 +34,15 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * XLM＝12
 * TRX＝13
 * USDT＝14
+* GTO=54
 * MOT＝58
 * BNB＝62
 * MOCT=66
 * PT=67
+* SOX=68
+* ERC20-USDT=69
+* DET=70
+* SOLO=71
 * ACEX=88
 
 # Kline/Candlestick data
