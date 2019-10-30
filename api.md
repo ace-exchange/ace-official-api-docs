@@ -26,6 +26,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * BUY
 * SELL
 ### Currency ID
+* TWD=1
 * BTC=2
 * ETH＝4
 * LTC＝7
