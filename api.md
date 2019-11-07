@@ -1,12 +1,24 @@
 
 # General API Information
-* The base endpoint is: https://www.ace.io/polarisex/
+* The base endpoint is: https://api.ace.io/open/v1
 * All endpoints return either a JSON object or array.
 * All time and timestamp related fields are in milliseconds.
 * For GET endpoints, parameters must be sent as a query string.
 * For POST, PUT, and DELETE endpoints, the parameters may be sent as a query string or in the request body with content type application/x-www-form-urlencoded. 
 * You may mix parameters between both the query string and request body if you wish to do so.
 * Parameters may be sent in any order.
+
+# Signing_API_Requests
+Important Note: Do not reveal your 'AccessKey' and 'SecretKey' to anyone. They are as important as your password. 
+
+To prevent the request(s) from being tempered in the process of network transmission, signature authentication is required for your API Key for the private interface, which guarantees that you are the source of the request(s). A legal ACE signature consists of parameters connected by “&” in alphabetical order, and your api_secret, through `MD5` method. The signature needed to be placed in the parameter sign.
+
+* Three parameters are required to be uploaded, including ACE_SIGN, timestamp and phone number, all are involved in signature expect forsign.
+* Follow the rule to combine the parameters : `ACE_SIGN + timestamp + phone number`.
+* If your `phone number` is `0886123456789`, and the current thirteen-digit `timestamp` is `1234567890000`, then your will get `ACE_SIGN12345678900000886123456789`.
+* Signing the obtained string with the MD5 digest algorithm results: `ca2aa2ff46d309ee9abeee2951ae8d27`. Place this result into `sign` parameter.
+
+
 # ENUM definitions
 ### Kline/Candlestick chart intervals:
 m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
@@ -46,8 +58,35 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * SOLO=71
 * ACEX=88
 
+# Market data
+    POST /coin/coinRelations
+    
+### Parameters:
+| Name | Type | Mandatory | Description |
+| ---- | ---- | ---- | ---- |
+| None | None | None | None
+
+### Response:
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| pointPrice | Integer | Price after the decimal point. |
+| pointNum | Integer | Amount after the decimal point. |
+| minPrice | BigDecimal | Minimum Price |
+| maxPrice | BigDecimal | Maximum Price |
+
+    {
+        "pointNum": 8,
+        "currencyId": 2,
+        "baseCurrencyId": 1,
+        "baseCurrencyNameEn": "TWD",
+        "maxPrice": 500000,
+        "pointPrice": 1,
+        "minPrice": 100,
+        "currencyNameEn": "BTC",
+    }
+
 # Kline/Candlestick data
-    GET /quote/getKline
+    POST /quote/getKline
 
 ### Parameters:
 | Name | Type | Mandatory | Description |
