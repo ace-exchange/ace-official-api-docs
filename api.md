@@ -111,7 +111,6 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     
 # Kline/Candlestick data
     POST /kline/getKlineMin
-
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -178,6 +177,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | signKey | String | YES | 
 
 ### Response:
+
     {
         "attachment": 200,
         "message": null,
@@ -213,7 +213,7 @@ OR
 | Name | Type | Description |
 | ---- | ---- | ---- |
 | status | INT | 0 unsettled; 1 partial; 2 fill |
-| buyOrSell | INT | 1=Buy;2=Sell | 
+| buyOrSell | INT | 1 Buy; 2 Sell | 
 
      {
         "attachment": {
@@ -257,7 +257,7 @@ OR
 | Name | Type | Description |
 | ---- | ---- | ---- |
 | status | INT | 0 unsettled; 1 partial; 2 fill |
-| buyOrSell | INT | 1=Buy;2=Sell | 
+| buyOrSell | INT | 1 Buy; 2 Sell | 
 
     {
         "attachment": {
@@ -298,7 +298,7 @@ OR
 | Name | Type | Description |
 | ---- | ---- | ---- |
 | status | INT | 0 unsettled; 1 partial; 2 fill |
-| buyOrSell | INT | 1=Buy;2=Sell | 
+| buyOrSell | INT | 1 Buy; 2 Sell | 
 
     {
         "attachment": {
