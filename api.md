@@ -16,7 +16,7 @@ To prevent the request(s) from being tempered in the process of network transmis
 * Three parameters are required to be uploaded, including ACE_SIGN, timestamp and phone number, all are involved in signature expect forsign.
 * Follow the rule to combine the parameters : `ACE_SIGN + timestamp + phone number`.
 * If your `phone number` is `0886123456789`, and the current thirteen-digit `timestamp` is `1234567890000`, then your will get `ACE_SIGN12345678900000886123456789`.
-* Signing the obtained string with the MD5 digest algorithm results: `ca2aa2ff46d309ee9abeee2951ae8d27`. Place this result into `sign` parameter.
+* Signing the obtained string with the MD5 digest algorithm results: `ca2aa2ff46d309ee9abeee2951ae8d27`. Place this result into `signKey` parameter.
 
 
 # ENUM definitions
@@ -60,11 +60,14 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 
 # Market data
     POST /coin/coinRelations
-    
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
-| None | None | None | None
+| uid | Long | YES | 
+| timeStamp | Long | YES | 
+| signKey | String | YES | 
+| apiKey | String | YES | 
+| securityKey | String | YES | 
 
 ### Response:
 | Name | Type | Description |
@@ -82,21 +85,57 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
         "maxPrice": 500000,
         "pointPrice": 1,
         "minPrice": 100,
-        "currencyNameEn": "BTC",
+        "currencyNameEn": "BTC"
     }
+    
+# Account Balance
+    POST /coin/customerAccount
+### Parameters:
+| Name | Type | Mandatory | Description |
+| ---- | ---- | ---- | ---- |
+| uid | Long | YES | 
+| timeStamp | Long | YES | 
+| signKey | String | YES | 
+| apiKey | String | YES | 
+| securityKey | String | YES | 
 
+### Response:
+
+    {
+        "currencyId": 4,
+        "amount": 6.896,
+        "cashAmount": 6.3855,
+        "uid": 000,
+        "currencyNameEn": "BTC"
+    }
+    
 # Kline/Candlestick data
-    POST /quote/getKline
+    POST /kline/getKlineMin
 
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
+| uid | Long | YES | 
+| timeStamp | Long | YES | 
+| signKey | String | YES | 
+| apiKey | String | YES | 
+| securityKey | String | YES | 
 | tradeCurrencyId | INT | YES |
-| limit | INT | YES |
 | baseCurrencyId | INT | YES |
-| type | INT | YES | 1 1m; 5 5m; 10 10m; 30 30m; 60 1h; 120 2h; 240 4h; 480 8h; 720 12h; 24 1d; 70 1w; 31 1M |
-| endTime | LONG | NO |
-| startTime | LONG | NO |
+| limit | INT | NO | 1~2000
+
+### Response:
+
+    {
+        "changeRate": 0,
+        "closePrice": 101000.0,
+        "lowPrice": 101000.0,
+        "highPrice": 101000.0,
+        "highPrice": 1573195740000L,
+        "openPrice": 101000.0,
+        "current": 101000.0,
+        "createTime": "2019-11-08 14:49:00"
+    }
 
 # New Order
     POST /polarisex/open/order/order
@@ -154,7 +193,7 @@ OR
     }
 
 # Order Status
-    POST /polarisex/open/order/showOrderStatus
+    POST /order/showOrderStatus
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -162,6 +201,8 @@ OR
 | apiKey | STRING | YES | 
 | securityKey | STRING | YES | 
 | uid | STRING | YES | 
+| timeStamp | Long | YES | 
+| signKey | String | YES | 
 
 ### Response:
 | Name | Type | Description |
@@ -190,7 +231,7 @@ OR
     } 
 
 # Order History
-    POST /polarisex/open/order/showOrderHistory
+    POST /order/showOrderHistory
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -198,6 +239,8 @@ OR
 | apiKey | STRING | YES | 
 | securityKey | STRING | YES | 
 | uid | STRING | YES | 
+| timeStamp | Long | YES | 
+| signKey | String | YES | 
 
 ### Response:
 | Name | Type | Description |
