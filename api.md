@@ -138,7 +138,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 
 # New Order
-    POST /polarisex/open/order/order
+    POST /order/order
 
 ### Parameters:
 | Name | Type | Mandatory | Description |
@@ -152,7 +152,8 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | apiKey | STRING | YES | 
 | securityKey | STRING | YES | 
 | uid | STRING | YES | 
-| source | INT | YES | 1 web; 2 other |
+| timeStamp | Long | YES | 
+| signKey | String | YES | 
 | fdPassword | - | YES | Null |
 
 ### Response:
@@ -165,7 +166,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 
 # Cancel Order
-    POST /polarisex/open/order/cancel
+    POST /order/cancel
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -173,8 +174,9 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | apiKey | STRING | YES | 
 | securityKey | STRING | YES | 
 | uid | STRING | YES | 
-| source | INT | YES | 1 web;2 other |
-| fdPassword | - | YES | Null |
+| timeStamp | Long | YES | 
+| signKey | String | YES | 
+
 ### Response:
     {
         "attachment": 200,
@@ -193,11 +195,58 @@ OR
     }
 
 # Order Status
+    POST /order/getOrderList
+### Parameters:
+| Name | Type | Mandatory | Description |
+| ---- | ---- | ---- | ---- |
+| uid | Long | YES | 
+| timeStamp | Long | YES | 
+| signKey | String | YES | 
+| apiKey | String | YES | 
+| securityKey | String | YES | 
+| baseCurrencyId | INT | NO |
+| tradeCurrencyId | INT | NO |
+| start | INT | NO |
+| size | INT | NO | 1-100
+
+### Response:
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| status | INT | 0 unsettled; 1 partial; 2 fill |
+| buyOrSell | INT | 1=Buy;2=Sell | 
+
+     {
+        "attachment": {
+            "uid": 0,
+            "orderNo": "15681910422154042100431100441305",
+            "orderTime": "2019-09-11 16:37:22.216",
+            "orderTimeStamp": 1573206849903L,
+            "baseCurrencyId": 2,
+            "baseCurrencyName": "BTC",
+            "currencyId": 4,
+            "currencyName": "ETH",
+            "buyOrSell": 1,
+            "num": "0.85000000",
+            "price": "0.03096500",
+            "remainNum": "0.00000000",
+            "tradeNum": "0.85000000",
+            "tradePrice": "0.0000000000000000",
+            "tradeRate": "0.00000000000000000000",
+            "tradeAmount": "0.0000000000000000", 
+            "status": 2,
+            "type": 1
+        },
+        "message": null,
+        "parameters": null,
+        "status": 200
+    } 
+    
+# Order OrderStatus
     POST /order/showOrderStatus
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
-| orderNo | STRING | YES |
+| orderId | STRING | YES |
 | apiKey | STRING | YES | 
 | securityKey | STRING | YES | 
 | uid | STRING | YES | 
@@ -209,26 +258,29 @@ OR
 | ---- | ---- | ---- |
 | status | INT | 0 unsettled; 1 partial; 2 fill |
 | buyOrSell | INT | 1=Buy;2=Sell | 
-     {
+
+    {
         "attachment": {
-            "remainNum": "0.00000000",
-            "orderNo": "15681910422154042100431100441305",
-            "num": "0.85000000",
-            "tradeNum": "0.85000000",
-            "baseCurrencyId": 2,
-            "baseCurrencyName": "Bitcoin",
-            "buyOrSell": 1,
-            "orderTime": "2019-09-11 16:37:22.216",
-            "currencyName": "Ethereum",
-            "price": "0.03096500",
-            "averagePrice": "0.03096500",
-            "currencyId": 4,
-            "status": 2 //  
+            "order": {
+                "remainNum": "0.00000000",
+                "orderNo": "15681910422154042100431100441305",
+                "num": "0.85000000",
+                "tradeNum": "0.85000000",
+                "baseCurrencyId": 2,
+                "baseCurrencyName": "Bitcoin",
+                "buyOrSell": 1,
+                "orderTime": "2019-09-11 16:37:22.216",
+                "currencyName": "Ethereum",
+                "price": "0.03096500",
+                "averagePrice": "0.03096500",
+                "currencyId": 4,
+                "status": 2
+            }
         },
         "message": null,
         "parameters": null,
         "status": 200
-    } 
+    }
 
 # Order History
     POST /order/showOrderHistory
