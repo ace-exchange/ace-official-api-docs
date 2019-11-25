@@ -43,10 +43,11 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * ETH＝4
 * LTC＝7
 * XRP＝10
-* EOS＝11
-* XLM＝12
 * TRX＝13
 * USDT＝14
+* BNB＝17
+* BTT＝19
+* HWGC＝22
 * GTO=54
 * MOT＝58
 * BNB＝62
@@ -56,6 +57,10 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * ERC20-USDT=69
 * DET=70
 * SOLO=71
+* QQQ＝72
+* HT＝74
+* UNI＝75
+* QTC＝76
 * ACEX=88
 
 # Market data
