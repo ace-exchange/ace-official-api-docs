@@ -9,7 +9,7 @@
 * Parameters may be sent in any order.
 
 # Signing_API_Requests
-Important Note: Do not reveal your 'AccessKey' and 'SecretKey' to anyone. They are as important as your password. 
+Important Note: Do not reveal your 'apiKey' and 'securityKey' to anyone. They are as important as your password. 
 
 To prevent the request(s) from being tempered in the process of network transmission, signature authentication is required for your API Key for the private interface, which guarantees that you are the source of the request(s). A legal ACE signature consists of parameters connected by “&” in alphabetical order, and your api_secret, through `MD5` method. The signature needed to be placed in the parameter sign.
 
