@@ -38,30 +38,92 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * BUY
 * SELL
 ### Currency ID
-* TWD=1
-* BTC=2
+* TWD＝1
+* BTC＝2
 * ETH＝4
 * LTC＝7
 * XRP＝10
+* EOS＝11
+* XLM＝12
 * TRX＝13
 * USDT＝14
 * BNB＝17
 * BTT＝19
 * HWGC＝22
-* GTO=54
+* GTO＝54
+* USDC＝57
 * MOT＝58
-* BNB＝62
-* MOCT=66
-* PT=67
-* SOX=68
-* ERC20-USDT=69
-* DET=70
-* SOLO=71
+* UNI＝59
+* MOS＝65
+* MOCT＝66
+* PT＝67
+* SOX＝68
+* DET＝70
+* SOLO＝71
 * QQQ＝72
+* APT＝73
 * HT＝74
 * UNI＝75
 * QTC＝76
-* ACEX=88
+* STC＝78
+* MCO＝79
+* FTT＝81
+* BAAS＝83
+* OKB＝84
+* DAI＝85
+* MCC＝86
+* TACEX＝87
+* ACEX＝88
+* LINK＝89
+* DEC＝90
+* FANSI＝91
+* PANDA＝92
+* HWGC＝93
+* KNC＝94
+* COMP＝95
+* DS＝96
+* CRO＝97
+
+# Trade Price
+    GET /polarisex/oapi/list/tradePrice
+### Response:
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| base_volume | Float | ---- |
+| last_price | Float | ---- |
+| quote_volume | Float | ---- |
+
+    {
+        "BTC/USDT":{
+            "base_volume":229196.34035399999,
+            "last_price":11881.06,
+            "quote_volume":19.2909
+        }
+     }
+
+
+# Market Pair
+    GET /polarisex/oapi/list/marketPair
+### Response:
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| market_pair | String Array | ---- |
+
+    {
+        "market_pair":["BTC/TWD","ETH/TWD","USDT/TWD","USDC/TWD"]
+    }
+
+# Order Books
+    GET /polarisex/oapi/list/orderBooks/<currency_name>/<currency_name>
+### Response:
+    {
+        "market_pair":"BTC/TWD",
+        "orderbook": {
+        "asks": [
+            [0.0042,359370.9],[0.0005,360882.3]
+            ]
+        }
+    }
 
 # Market data
     POST /coin/coinRelations
