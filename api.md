@@ -89,9 +89,9 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
-| base_volume | Float | ---- |
-| last_price | Float | ---- |
-| quote_volume | Float | ---- |
+| base_volume | Float |  |
+| last_price | Float |  |
+| quote_volume | Float |  |
 
     {
         "BTC/USDT":{
@@ -107,7 +107,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
-| market_pair | String Array | ---- |
+| market_pair | String Array |  |
 
     {
         "market_pair":["BTC/TWD","ETH/TWD","USDT/TWD","USDC/TWD"]
