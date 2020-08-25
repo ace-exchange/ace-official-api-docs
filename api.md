@@ -1,5 +1,6 @@
 
 # General API Information
+* The openapi endpoint is: https://www.ace.io/polarisex/oapi
 * The base endpoint is: https://www.ace.io/polarisex/open/v1
 * All endpoints return either a JSON object or array.
 * All time and timestamp related fields are in milliseconds.
@@ -85,7 +86,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * CRO＝97
 
 # Trade Price
-    POST /polarisex/oapi/list/tradePrice
+    POST /list/tradePrice
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
@@ -102,8 +103,8 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
      }
 
 
-# Market Pair
-    POST /polarisex/oapi/list/marketPair
+# OPEN API - Market Pair
+    POST /list/marketPair
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
@@ -113,8 +114,8 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
         "market_pair":["BTC/TWD","ETH/TWD","USDT/TWD","USDC/TWD"]
     }
 
-# Order Books
-    POST /polarisex/oapi/list/orderBooks/<currency_name>/<currency_name>
+# OPEN API - Order Books
+    POST /list/orderBooks/<currency_name>/<currency_name>
 ### Response:
     {
         "market_pair":"BTC/TWD",
@@ -125,7 +126,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
         }
     }
 
-# Market data
+# OPEN API - Market data
     POST /coin/coinRelations
 ### Parameters:
 | Name | Type | Mandatory | Description |
