@@ -85,7 +85,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * CRO＝97
 
 # Trade Price
-    GET /polarisex/oapi/list/tradePrice
+    POST /polarisex/oapi/list/tradePrice
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
@@ -103,7 +103,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 
 
 # Market Pair
-    GET /polarisex/oapi/list/marketPair
+    POST /polarisex/oapi/list/marketPair
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
@@ -114,7 +114,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 
 # Order Books
-    GET /polarisex/oapi/list/orderBooks/<currency_name>/<currency_name>
+    POST /polarisex/oapi/list/orderBooks/<currency_name>/<currency_name>
 ### Response:
     {
         "market_pair":"BTC/TWD",
