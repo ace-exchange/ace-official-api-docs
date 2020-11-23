@@ -85,7 +85,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * DS＝96
 * CRO＝97
 
-# Trade Price
+# OPEN API - Trade Price
     POST /list/tradePrice
 ### Response:
 | Name | Type | Description |
