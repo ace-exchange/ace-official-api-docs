@@ -115,7 +115,19 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 
 # OPEN API - Order Books
-    POST /list/orderBooks/<currency_name>/<currency_name>
+    POST /list/orderBooks/<currency_name>/<basecurrency_name>
+### Response:
+    {
+        "market_pair":"BTC/TWD",
+        "orderbook": {
+        "asks": [
+            [0.0042,359370.9],[0.0005,360882.3]
+            ]
+        }
+    }
+    
+# OPEN API - Order History
+    POST /list/tradeshistory/<currency_name>/<basecurrency_name>
 ### Response:
     {
         "market_pair":"BTC/TWD",
@@ -155,7 +167,41 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
         "minPrice": 100,
         "currencyNameEn": "BTC"
     }
-    
+
+# OPEN API - 24Hours Trade History
+    POST /list/trades/<currency_name>/<basecurrency_name>
+### Response:
+
+    {
+    "attachment": {
+        "total": 3, 
+        "list": [{
+            "tradeId": 10140160,
+            "price": 30.3547,
+            "baseVolume": 242.8376, 
+            "quoteVolume": 8.0, 
+            "timestamp": 1606717020522, 
+            "type": "buy"
+        }, {
+            "tradeId": 10140159,
+            "price": 30.3547, 
+            "baseVolume": 151.7735, 
+            "quoteVolume": 5.0, 
+            "timestamp": 1606717014489, 
+            "type": "buy"
+        }, {
+            "tradeId": 10140158,
+            "price": 30.3547, 
+            "baseVolume": 151.7735, 
+            "quoteVolume": 5.0,
+            "timestamp": 1606717009256,
+            "type": "buy"
+        }] },
+        "message": null, 
+        "parameters": null,
+        "status": 200
+    }
+
 # Account Balance
     POST /coin/customerAccount
 ### Parameters:
