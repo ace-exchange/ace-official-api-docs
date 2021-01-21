@@ -138,36 +138,6 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
         }
     }
 
-# OPEN API - Market data
-    POST /coin/coinRelations
-### Parameters:
-| Name | Type | Mandatory | Description |
-| ---- | ---- | ---- | ---- |
-| uid | Long | YES | 
-| timeStamp | Long | YES | 
-| signKey | String | YES | 
-| apiKey | String | YES | 
-| securityKey | String | YES | 
-
-### Response:
-| Name | Type | Description |
-| ---- | ---- | ---- |
-| pointPrice | Integer | Price after the decimal point. |
-| pointNum | Integer | Amount after the decimal point. |
-| minPrice | BigDecimal | Minimum Price |
-| maxPrice | BigDecimal | Maximum Price |
-
-    {
-        "pointNum": 8,
-        "currencyId": 2,
-        "baseCurrencyId": 1,
-        "baseCurrencyNameEn": "TWD",
-        "maxPrice": 500000,
-        "pointPrice": 1,
-        "minPrice": 100,
-        "currencyNameEn": "BTC"
-    }
-
 # OPEN API - 24Hours Trade History
     POST /list/trades/<currency_name>/<basecurrency_name>
 ### Response:
