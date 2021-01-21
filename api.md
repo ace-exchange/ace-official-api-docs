@@ -86,7 +86,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * CRO＝97
 
 # OPEN API - Trade Price
-    POST /list/tradePrice
+    GET /list/tradePrice
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
@@ -104,7 +104,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 
 
 # OPEN API - Market Pair
-    POST /list/marketPair
+    GET /list/marketPair
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
@@ -115,7 +115,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 
 # OPEN API - Order Books
-    POST /list/orderBooks/<currency_name>/<basecurrency_name>
+    GET /list/orderBooks/<currency_name>/<basecurrency_name>
 ### Response:
     {
         "market_pair":"BTC/TWD",
@@ -127,7 +127,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
     
 # OPEN API - Order History
-    POST /list/tradeshistory/<currency_name>/<basecurrency_name>
+    GET /list/tradeshistory/<currency_name>/<basecurrency_name>
 ### Response:
     {
         "market_pair":"BTC/TWD",
@@ -139,7 +139,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 
 # OPEN API - 24Hours Trade History
-    POST /list/trades/<currency_name>/<basecurrency_name>
+    GET /list/trades/<currency_name>/<basecurrency_name>
 ### Response:
 
     {
