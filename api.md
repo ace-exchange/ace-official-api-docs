@@ -125,18 +125,6 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
             ]
         }
     }
-    
-# OPEN API - Order History
-    GET /list/tradeshistory/<currency_name>/<basecurrency_name>
-### Response:
-    {
-        "market_pair":"BTC/TWD",
-        "orderbook": {
-        "asks": [
-            [0.0042,359370.9],[0.0005,360882.3]
-            ]
-        }
-    }
 
 # OPEN API - 24Hours Trade History
     GET /list/trades/<currency_name>/<basecurrency_name>
