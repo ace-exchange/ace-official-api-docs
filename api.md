@@ -5,12 +5,12 @@
 * All endpoints return either a JSON object or array.
 * All time and timestamp related fields are in milliseconds.
 * For GET endpoints, parameters must be sent as a query string.
-* For POST, PUT, and DELETE endpoints, the parameters may be sent as a query string or in the request body with content type application/x-www-form-urlencoded. 
+* For POST, PUT, and DELETE endpoints, the parameters may be sent as a query string or in the request body with content type application/x-www-form-urlencoded.
 * You may mix parameters between both the query string and request body if you wish to do so.
 * Parameters may be sent in any order.
 
 # Signing_API_Requests
-Important Note: Do not reveal your 'apiKey' and 'securityKey' to anyone. They are as important as your password. 
+Important Note: Do not reveal your 'apiKey' and 'securityKey' to anyone. They are as important as your password.
 
 To prevent the request(s) from being tempered in the process of network transmission, signature authentication is required for your API Key for the private interface, which guarantees that you are the source of the request(s). A legal ACE signature consists of parameters connected by “&” in alphabetical order, and your api_secret, through `MD5` method. The signature needed to be placed in the parameter sign.
 
@@ -132,30 +132,30 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 
     {
     "attachment": {
-        "total": 3, 
+        "total": 3,
         "list": [{
             "tradeId": 10140160,
             "price": 30.3547,
-            "baseVolume": 242.8376, 
-            "quoteVolume": 8.0, 
-            "timestamp": 1606717020522, 
+            "baseVolume": 242.8376,
+            "quoteVolume": 8.0,
+            "timestamp": 1606717020522,
             "type": "buy"
         }, {
             "tradeId": 10140159,
-            "price": 30.3547, 
-            "baseVolume": 151.7735, 
-            "quoteVolume": 5.0, 
-            "timestamp": 1606717014489, 
+            "price": 30.3547,
+            "baseVolume": 151.7735,
+            "quoteVolume": 5.0,
+            "timestamp": 1606717014489,
             "type": "buy"
         }, {
             "tradeId": 10140158,
-            "price": 30.3547, 
-            "baseVolume": 151.7735, 
+            "price": 30.3547,
+            "baseVolume": 151.7735,
             "quoteVolume": 5.0,
             "timestamp": 1606717009256,
             "type": "buy"
         }] },
-        "message": null, 
+        "message": null,
         "parameters": null,
         "status": 200
     }
@@ -165,11 +165,11 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
-| uid | Long | YES | 
-| timeStamp | Long | YES | 
-| signKey | String | YES | 
-| apiKey | String | YES | 
-| securityKey | String | YES | 
+| uid | Long | YES |
+| timeStamp | Long | YES |
+| signKey | String | YES |
+| apiKey | String | YES |
+| securityKey | String | YES |
 
 ### Response:
 
@@ -180,17 +180,17 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
         "uid": 000,
         "currencyNameEn": "BTC"
     }
-    
+
 # Kline/Candlestick data
     POST /kline/getKlineMin
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
-| uid | Long | YES | 
-| timeStamp | Long | YES | 
-| signKey | String | YES | 
-| apiKey | String | YES | 
-| securityKey | String | YES | 
+| uid | Long | YES |
+| timeStamp | Long | YES |
+| signKey | String | YES |
+| apiKey | String | YES |
+| securityKey | String | YES |
 | tradeCurrencyId | INT | YES |
 | baseCurrencyId | INT | YES |
 | limit | INT | NO | 1~2000
@@ -217,14 +217,14 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | baseCurrencyId | INT | YES |
 | currencyId | INT | YES |
 | buyOrSell | INT | YES | 1 Buy;2 Sell |
-| price | INT | YES | 
+| price | INT | YES |
 | num | INT | YES |
 | type | INT | YES | 1 limit order; 2 market order |
-| apiKey | STRING | YES | 
-| securityKey | STRING | YES | 
-| uid | STRING | YES | 
-| timeStamp | Long | YES | 
-| signKey | String | YES | 
+| apiKey | STRING | YES |
+| securityKey | STRING | YES |
+| uid | STRING | YES |
+| timeStamp | Long | YES |
+| signKey | String | YES |
 | fdPassword | - | YES | Null |
 
 ### Response:
@@ -242,11 +242,11 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
 | orderNo | STRING | YES |
-| apiKey | STRING | YES | 
-| securityKey | STRING | YES | 
-| uid | STRING | YES | 
-| timeStamp | Long | YES | 
-| signKey | String | YES | 
+| apiKey | STRING | YES |
+| securityKey | STRING | YES |
+| uid | STRING | YES |
+| timeStamp | Long | YES |
+| signKey | String | YES |
 
 ### Response:
 
@@ -271,65 +271,67 @@ OR
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
-| uid | Long | YES | 
-| timeStamp | Long | YES | 
-| signKey | String | YES | 
-| apiKey | String | YES | 
-| securityKey | String | YES | 
+| uid | Long | YES |
+| timeStamp | Long | YES |
+| signKey | String | YES |
+| apiKey | String | YES |
+| securityKey | String | YES |
 | baseCurrencyId | INT | NO |
 | tradeCurrencyId | INT | NO |
-| start | INT | NO |
-| size | INT | NO | 1-100
+| start | INT | NO | Default 1
+| size | INT | NO | 1-100 Default 10
 
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
 | status | INT | 0 unsettled; 1 partial; 2 fill |
-| buyOrSell | INT | 1 Buy; 2 Sell | 
+| buyOrSell | INT | 1 Buy; 2 Sell |
 
-     {
-        "attachment": {
-            "uid": 0,
-            "orderNo": "15681910422154042100431100441305",
-            "orderTime": "2019-09-11 16:37:22.216",
-            "orderTimeStamp": 1573206849903L,
-            "baseCurrencyId": 2,
-            "baseCurrencyName": "BTC",
-            "currencyId": 4,
-            "currencyName": "ETH",
-            "buyOrSell": 1,
-            "num": "0.85000000",
-            "price": "0.03096500",
-            "remainNum": "0.00000000",
-            "tradeNum": "0.85000000",
-            "tradePrice": "0.0000000000000000",
-            "tradeRate": "0.00000000000000000000",
-            "tradeAmount": "0.0000000000000000", 
-            "status": 2,
-            "type": 1
-        },
-        "message": null,
-        "parameters": null,
-        "status": 200
-    } 
-    
+    {
+      "attachment": [
+        {
+          "uid": 0,
+          "orderNo": "16113081376560890227301101413941",
+          "orderTime": "2021-01-22 17:35:37",
+          "orderTimeStamp": 1611308137656,
+          "baseCurrencyId": 1,
+          "baseCurrencyNameEn": "TWD",
+          "currencyId": 14,
+          "currencyNameEn": "USDT",
+          "buyOrSell": "1",
+          "num": "6.0000000000000000",
+          "price": "32.5880000000000000",
+          "remainNum": "2.0000000000000000",
+          "tradeNum": "4.0000000000000000",
+          "tradePrice": "31.19800000000000000000",
+          "tradeAmount": "124.7920000000000000",
+          "tradeRate": "0.66666666666666666667",
+          "status": 1,
+          "type": 1
+        }
+      ],
+      "message": null,
+      "parameters": null,
+      "status": 200
+    }    
+
 # Order OrderStatus
     POST /order/showOrderStatus
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
 | orderId | STRING | YES |
-| apiKey | STRING | YES | 
-| securityKey | STRING | YES | 
-| uid | STRING | YES | 
-| timeStamp | Long | YES | 
-| signKey | String | YES | 
+| apiKey | STRING | YES |
+| securityKey | STRING | YES |
+| uid | STRING | YES |
+| timeStamp | Long | YES |
+| signKey | String | YES |
 
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
 | status | INT | 0 unsettled; 1 partial; 2 fill |
-| buyOrSell | INT | 1 Buy; 2 Sell | 
+| buyOrSell | INT | 1 Buy; 2 Sell |
 
     {
         "attachment": {
@@ -360,17 +362,17 @@ OR
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
 | orderId | STRING | YES |
-| apiKey | STRING | YES | 
-| securityKey | STRING | YES | 
-| uid | STRING | YES | 
-| timeStamp | Long | YES | 
-| signKey | String | YES | 
+| apiKey | STRING | YES |
+| securityKey | STRING | YES |
+| uid | STRING | YES |
+| timeStamp | Long | YES |
+| signKey | String | YES |
 
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
 | status | INT | 0 unsettled; 1 partial; 2 fill |
-| buyOrSell | INT | 1 Buy; 2 Sell | 
+| buyOrSell | INT | 1 Buy; 2 Sell |
 
     {
         "attachment": {
@@ -412,9 +414,3 @@ OR
         "parameters": null,
         "status": 200
     }
-
-
-
-
-
-
