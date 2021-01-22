@@ -225,7 +225,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | uid | STRING | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
-| fdPassword | - | YES | Null |
+| fdPassword | String | NO | Depends on user's security setting of fund password is required. |
 
 ### Response:
 
