@@ -1,7 +1,7 @@
 
 # General API Information
-* The openapi endpoint is: https://www.ace.io/polarisex/oapi
-* The base endpoint is: https://www.ace.io/polarisex/open/v1
+* The openapi endpoint is: https://ace.io/polarisex/oapi
+* The base endpoint is: https://ace.io/polarisex/open/v1
 * All endpoints return either a JSON object or array.
 * All time and timestamp related fields are in milliseconds.
 * For GET endpoints, parameters must be sent as a query string.
