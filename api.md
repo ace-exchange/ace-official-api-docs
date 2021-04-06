@@ -58,7 +58,6 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * MOS＝65
 * MOCT＝66
 * PT＝67
-* SOX＝68
 * DET＝70
 * SOLO＝71
 * QQQ＝72
@@ -84,6 +83,18 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * COMP＝95
 * DS＝96
 * CRO＝97
+* BULL=99
+* BEAR=100
+* CREAM=101
+* YFI=102
+* WNXM=103
+* MITH=104
+* DEAC=105
+* ENJ=107
+* ANKR=108
+* MANA=109
+* SXP=110
+* CHZ=111
 
 # OPEN API - Trade Price
     GET /list/tradePrice
