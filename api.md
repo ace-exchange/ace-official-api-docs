@@ -95,6 +95,10 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * MANA=109
 * SXP=110
 * CHZ=111
+* DOT=112
+* CAKE=114
+* SHIB=115
+
 
 # OPEN API - Trade Price
     GET /list/tradePrice
