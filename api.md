@@ -65,7 +65,6 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * HT＝74
 * UNI＝75
 * QTC＝76
-* STC＝78
 * MCO＝79
 * FTT＝81
 * BAAS＝83
@@ -77,14 +76,11 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * LINK＝89
 * DEC＝90
 * FANSI＝91
-* PANDA＝92
 * HWGC＝93
 * KNC＝94
 * COMP＝95
 * DS＝96
 * CRO＝97
-* BULL=99
-* BEAR=100
 * CREAM=101
 * YFI=102
 * WNXM=103
@@ -98,6 +94,8 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * DOT=112
 * CAKE=114
 * SHIB=115
+* DOGE=116
+* MATIC=117
 
 
 # OPEN API - Trade Price
@@ -141,39 +139,6 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
         }
     }
 
-# OPEN API - 24Hours Trade History
-    GET /list/trades/<currency_name>/<basecurrency_name>
-### Response:
-
-    {
-    "attachment": {
-        "total": 3,
-        "list": [{
-            "tradeId": 10140160,
-            "price": 30.3547,
-            "baseVolume": 242.8376,
-            "quoteVolume": 8.0,
-            "timestamp": 1606717020522,
-            "type": "buy"
-        }, {
-            "tradeId": 10140159,
-            "price": 30.3547,
-            "baseVolume": 151.7735,
-            "quoteVolume": 5.0,
-            "timestamp": 1606717014489,
-            "type": "buy"
-        }, {
-            "tradeId": 10140158,
-            "price": 30.3547,
-            "baseVolume": 151.7735,
-            "quoteVolume": 5.0,
-            "timestamp": 1606717009256,
-            "type": "buy"
-        }] },
-        "message": null,
-        "parameters": null,
-        "status": 200
-    }
 
 # Account Balance
     POST /coin/customerAccount
