@@ -96,7 +96,9 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * SHIB=115
 * DOGE=116
 * MATIC=117
-
+* WOO=119
+* SLP=120
+* AXS=121
 
 # OPEN API - Trade Price
     GET /list/tradePrice
