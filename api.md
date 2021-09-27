@@ -99,6 +99,8 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * WOO=119
 * SLP=120
 * AXS=121
+* ADA=122
+* QUICK=123
 
 # OPEN API - Trade Price
     GET /list/tradePrice
