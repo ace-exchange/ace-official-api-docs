@@ -1,7 +1,5 @@
 
 # General API Information
-* The openapi endpoint is: https://ace.io/polarisex/oapi
-* The base endpoint is: https://ace.io/polarisex/open/v1
 * All endpoints return either a JSON object or array.
 * All time and timestamp related fields are in milliseconds.
 * For GET endpoints, parameters must be sent as a query string.
@@ -103,7 +101,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * QUICK=123
 
 # OPEN API - Trade Price
-    GET /list/tradePrice
+    GET https://ace.io/polarisex/oapi/list/marketPair/list/tradePrice
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
@@ -121,7 +119,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 
 
 # OPEN API - Market Pair
-    GET /list/marketPair
+    GET https://ace.io/polarisex/oapi/list/marketPair
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
@@ -132,7 +130,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 
 # OPEN API - Order Books
-    GET /list/orderBooks/<currency_name>/<basecurrency_name>
+    GET https://ace.io/polarisex/oapi/list/orderBooks/<currency_name>/<basecurrency_name>
 ### Response:
     {
         "market_pair":"BTC/TWD",
@@ -145,7 +143,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 
 
 # Account Balance
-    POST /coin/customerAccount
+    POST https://ace.io/polarisex/open/v1/coin/customerAccount
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -166,7 +164,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 
 # Kline/Candlestick data
-    POST /kline/getKlineMin
+    POST https://ace.io/polarisex/open/v1/kline/getKlineMin
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -193,7 +191,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 
 # New Order
-    POST /order/order
+    POST https://ace.io/polarisex/open/v1/order/order
 
 ### Parameters:
 | Name | Type | Mandatory | Description |
@@ -221,7 +219,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 
 # Cancel Order
-    POST /order/cancel
+    POST https://ace.io/polarisex/open/v1/order/cancel
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -251,7 +249,7 @@ OR
     }
 
 # Order Status
-    POST /order/getOrderList
+    POST https://ace.io/polarisex/open/v1/order/getOrderList
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -300,7 +298,7 @@ OR
     }    
 
 # Order OrderStatus
-    POST /order/showOrderStatus
+    POST https://ace.io/polarisex/open/v1/order/showOrderStatus
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -341,7 +339,7 @@ OR
     }
 
 # Order History
-    POST /order/showOrderHistory
+    POST https://ace.io/polarisex/open/v1/order/showOrderHistory
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
