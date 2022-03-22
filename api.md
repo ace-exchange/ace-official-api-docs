@@ -8,7 +8,7 @@
 * Parameters may be sent in any order.
 * We have two kinds of api:\
   a. '/oapi/' apis can use directly.\
-  b. '/open/' apis requires 'apiKey' and 'securityKey', can apply them in ACE web https://ace.io/.
+  b. '/open/' apis require 'apiKey' and 'securityKey', can apply them in ACE web https://ace.io/.
 
 # Signing API Requests
 Important Note: Do not reveal your 'apiKey' and 'securityKey' to anyone. They are as important as your password.
