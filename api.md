@@ -138,9 +138,9 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     {
         "market_pair":"BTC/TWD",
         "orderbook": {
-        "asks": [
+          "asks": [
             [0.0042,359370.9],[0.0005,360882.3]
-            ]
+          ]
         }
     }
 
