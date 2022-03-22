@@ -6,8 +6,11 @@
 * For POST, PUT, and DELETE endpoints, the parameters may be sent as a query string or in the request body with content type application/x-www-form-urlencoded.
 * You may mix parameters between both the query string and request body if you wish to do so.
 * Parameters may be sent in any order.
+* We have two kinds of api: 
+  a. /oapi/ can use directly.
+  b. /open/ needs 'apiKey' and 'securityKey', you can apply them in our web.
 
-# Signing_API_Requests
+# Signing API Requests
 Important Note: Do not reveal your 'apiKey' and 'securityKey' to anyone. They are as important as your password.
 
 To prevent the request(s) from being tempered in the process of network transmission, signature authentication is required for your API Key for the private interface, which guarantees that you are the source of the request(s). A legal ACE signature consists of parameters connected by “&” in alphabetical order, and your api_secret, through `MD5` method. The signature needed to be placed in the parameter sign.
