@@ -6,7 +6,7 @@
 * For POST, PUT, and DELETE endpoints, the parameters may be sent as a query string or in the request body with content type application/x-www-form-urlencoded.
 * You may mix parameters between both the query string and request body if you wish to do so.
 * Parameters may be sent in any order.
-* We have two kinds of api:\
+* wo kinds of api:\
   a. 'Oapi' apis can use directly.\
   b. 'Open' apis require 'apiKey' and 'securityKey', can apply them in ACE web https://ace.io/.
 
