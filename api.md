@@ -101,7 +101,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * QUICK=123
 
 # OPEN API - Trade Price
-    GET https://ace.io/polarisex/oapi/list/marketPair/list/tradePrice
+    GET https://ace.io/polarisex/oapi/list/tradePrice
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
