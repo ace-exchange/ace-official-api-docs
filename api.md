@@ -103,7 +103,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * ADA=122
 * QUICK=123
 
-# oapi API - Trade Price
+# Oapi API - Trade Price
     GET https://ace.io/polarisex/oapi/list/tradePrice
 ### Response:
 | Name | Type | Description |
@@ -121,7 +121,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
      }
 
 
-# oapi API - Market Pair
+# Oapi API - Market Pair
     GET https://ace.io/polarisex/oapi/list/marketPair
 ### Response:
 | Name | Type | Description |
@@ -132,7 +132,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
         "market_pair":["BTC/TWD","ETH/TWD","USDT/TWD","USDC/TWD"]
     }
 
-# oapi API - Order Books
+# Oapi API - Order Books
     GET https://ace.io/polarisex/oapi/list/orderBooks/<currency_name>/<basecurrency_name>
 ### Response:
     {
@@ -145,7 +145,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 
 
-# open API - Account Balance
+# Open API - Account Balance
     POST https://ace.io/polarisex/open/v1/coin/customerAccount
 ### Parameters:
 | Name | Type | Mandatory | Description |
@@ -166,7 +166,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
         "currencyNameEn": "BTC"
     }
 
-# open API - Kline/Candlestick data
+# Open API - Kline/Candlestick data
     POST https://ace.io/polarisex/open/v1/kline/getKlineMin
 ### Parameters:
 | Name | Type | Mandatory | Description |
@@ -193,7 +193,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
         "createTime": "2019-11-08 14:49:00"
     }
 
-# open API - New Order
+# Open API - New Order
     POST https://ace.io/polarisex/open/v1/order/order
 
 ### Parameters:
@@ -221,7 +221,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
         "status": 200
     }
 
-# open API - Cancel Order
+# Open API - Cancel Order
     POST https://ace.io/polarisex/open/v1/order/cancel
 ### Parameters:
 | Name | Type | Mandatory | Description |
@@ -251,7 +251,7 @@ OR
         "status": 2061
     }
 
-# open API - Order Status
+# Open API - Order Status
     POST https://ace.io/polarisex/open/v1/order/getOrderList
 ### Parameters:
 | Name | Type | Mandatory | Description |
@@ -300,7 +300,7 @@ OR
       "status": 200
     }    
 
-# open API - Order OrderStatus
+# Open API - Order OrderStatus
     POST https://ace.io/polarisex/open/v1/order/showOrderStatus
 ### Parameters:
 | Name | Type | Mandatory | Description |
@@ -341,7 +341,7 @@ OR
         "status": 200
     }
 
-# open API - Order History
+# Open API - Order History
     POST https://ace.io/polarisex/open/v1/order/showOrderHistory
 ### Parameters:
 | Name | Type | Mandatory | Description |
