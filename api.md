@@ -7,8 +7,8 @@
 * You may mix parameters between both the query string and request body if you wish to do so.
 * Parameters may be sent in any order.
 * We have two kinds of api:\
-  a. /oapi/ can use directly.\
-  b. /open/ needs 'apiKey' and 'securityKey', you can apply them in our web.
+  a. '/oapi/' apis can use directly.\
+  b. '/open/' apis requires 'apiKey' and 'securityKey', can apply them in ACE web https://ace.io/.
 
 # Signing API Requests
 Important Note: Do not reveal your 'apiKey' and 'securityKey' to anyone. They are as important as your password.
