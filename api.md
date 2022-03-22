@@ -6,9 +6,9 @@
 * For POST, PUT, and DELETE endpoints, the parameters may be sent as a query string or in the request body with content type application/x-www-form-urlencoded.
 * You may mix parameters between both the query string and request body if you wish to do so.
 * Parameters may be sent in any order.
-* We have two kinds of api: 
-  a. /oapi/ can use directly.
-  b. /open/ needs 'apiKey' and 'securityKey', you can apply them in our web.
+* We have two kinds of api:\
+  a. /oapi/ can use directly.\
+  b. /open/ needs 'apiKey' and 'securityKey', you can apply them in our web.\
 
 # Signing API Requests
 Important Note: Do not reveal your 'apiKey' and 'securityKey' to anyone. They are as important as your password.
