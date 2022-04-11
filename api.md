@@ -163,13 +163,13 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
           "currencyId": 4,
           "amount": 6.896,
           "cashAmount": 6.3855,
-          "uid": 000,
-          "currencyNameEn": "BTC",
-          "status": 200,
-          "message":null,
-          "parameters":null
+          "uid": 123,
+          "currencyNameEn": "BTC"
         }
-      ]
+      ],
+      "status": 200,
+      "message":null,
+      "parameters":null
     }
 
 # Open API - Kline/Candlestick data
