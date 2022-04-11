@@ -3,7 +3,7 @@
 * All endpoints return either a JSON object or array.
 * All time and timestamp related fields are in milliseconds.
 * For GET endpoints, parameters must be sent as a query string.
-* For POST, PUT, and DELETE endpoints, the parameters may be sent as a query string or in the request body with content type application/x-www-form-urlencoded.
+* For POST, PUT, and DELETE endpoints, the parameters may be sent as a query string or in the request path.
 * You may mix parameters between both the query string and request body if you wish to do so.
 * Parameters may be sent in any order.
 * Two kinds of api:\
@@ -159,11 +159,18 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 ### Response:
 
     {
-        "currencyId": 4,
-        "amount": 6.896,
-        "cashAmount": 6.3855,
-        "uid": 000,
-        "currencyNameEn": "BTC"
+      "attachment":[
+        {
+          "currencyId": 4,
+          "amount": 6.896,
+          "cashAmount": 6.3855,
+          "uid": 000,
+          "currencyNameEn": "BTC",
+          "status": 200,
+          "message":null,
+          "parameters":null
+        }
+      ]
     }
 
 # Open API - Kline/Candlestick data
