@@ -208,8 +208,8 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | baseCurrencyId | INT | YES |
 | currencyId | INT | YES |
 | buyOrSell | INT | YES | 1 Buy;2 Sell |
-| price | INT | YES |
-| num | INT | YES |
+| price | FLOAT | YES |
+| num | FLOAT | YES |
 | type | INT | YES | 1 limit order; 2 market order |
 | apiKey | STRING | YES |
 | securityKey | STRING | YES |
