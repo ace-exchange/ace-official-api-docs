@@ -3,7 +3,6 @@
 * All endpoints return either a JSON object or array.
 * All time and timestamp related fields are in milliseconds.
 * For GET endpoints, parameters must be sent as a query string.
-* For POST, PUT, and DELETE endpoints, the parameters may be sent as a query string or in the request path.
 * You may mix parameters between both the query string and request body if you wish to do so.
 * Parameters may be sent in any order.
 * Two kinds of api:\
