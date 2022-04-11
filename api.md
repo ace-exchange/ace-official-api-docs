@@ -257,7 +257,7 @@ OR
         "status": 2061
     }
 
-# Open API - Order Status
+# Open API - Order List
     POST https://ace.io/polarisex/open/v1/order/getOrderList
 ### Parameters:
 | Name | Type | Mandatory | Description |
@@ -306,7 +306,7 @@ OR
       "status": 200
     }    
 
-# Open API - Order OrderStatus
+# Open API - Order Status
     POST https://ace.io/polarisex/open/v1/order/showOrderStatus
 ### Parameters:
 | Name | Type | Mandatory | Description |
