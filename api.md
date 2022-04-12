@@ -326,21 +326,19 @@ OR
 
     {
         "attachment": {
-            "order": {
-                "remainNum": "0.00000000",
-                "orderNo": "15681910422154042100431100441305",
-                "num": "0.85000000",
-                "tradeNum": "0.85000000",
-                "baseCurrencyId": 2,
-                "baseCurrencyName": "Bitcoin",
-                "buyOrSell": 1,
-                "orderTime": "2019-09-11 16:37:22.216",
-                "currencyName": "Ethereum",
-                "price": "0.03096500",
-                "averagePrice": "0.03096500",
-                "currencyId": 4,
-                "status": 2
-            }
+          "remainNum": "0.00000000",
+          "orderNo": "15681910422154042100431100441305",
+          "num": "0.85000000",
+          "tradeNum": "0.85000000",
+          "baseCurrencyId": 2,
+          "baseCurrencyName": "Bitcoin",
+          "buyOrSell": 1,
+          "orderTime": "2019-09-11 16:37:22.216",
+          "currencyName": "Ethereum",
+          "price": "0.03096500",
+          "averagePrice": "0.03096500",
+          "currencyId": 4,
+          "status": 2
         },
         "message": null,
         "parameters": null,
