@@ -12,7 +12,7 @@
 # Signing API Requests
 Important Note: Do not reveal your 'apiKey' and 'securityKey' to anyone. They are as important as your password.
 
-To prevent the request(s) from being tempered in the process of network transmission, signature authentication is required for your API Key for the private interface, which guarantees that you are the source of the request(s). A legal ACE signature consists of parameters connected by “&” in alphabetical order, and your api_secret, through `MD5` method. The signature needed to be placed in the parameter sign.
+To prevent the request(s) from being tempered in the process of network transmission, signature authentication is required for your API Key for the private interface, which guarantees that you are the source of the request(s). A legal ACE signature consists of parameters connected by “&”, and your api_secret, through `MD5` method. The signature needed to be placed in the parameter sign.
 
 * Three parameters are required to be uploaded, including ACE_SIGN, timestamp and phone number, all are involved in signature expect forsign.
 * Follow the rule to combine the parameters : `ACE_SIGN + timestamp + phone number`.
