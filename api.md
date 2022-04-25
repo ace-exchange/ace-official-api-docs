@@ -101,6 +101,18 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * AXS=121
 * ADA=122
 * QUICK=123
+* FTM=124
+* YGG=126
+* GALA=127
+* ILV=128
+* DYDX=129
+* SOL=130
+* SAND=131
+* AVAX=132
+* LOOKS=133
+* DEP=134
+* APE=135
+* GMT=136
 
 # Oapi API - Trade Price
     GET https://ace.io/polarisex/oapi/list/tradePrice
