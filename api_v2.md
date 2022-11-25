@@ -238,16 +238,17 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 ```
 # Open API - New Order
-    POST https://ace.io/polarisex/open/v1/order/order
+    POST https://ace.io/polarisex/open/v2/order/order
 
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
-| baseCurrencyId | INT | YES |
-| quuoteCurrencyId | INT | YES |
+| baseCurrencyId | String | YES |
+| quoteCurrencyId | String | YES |
 | buyOrSell | INT | YES | 1 Buy;2 Sell |
-| price | FLOAT | YES |
-| num | FLOAT | YES |
+| price | String | YES |
+| num | String | No |
+| amount | String | No |
 | type | INT | YES | 1 limit order; 2 market order |
 | apiKey | STRING | YES |
 | securityKey | STRING | YES |
