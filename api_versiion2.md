@@ -137,12 +137,22 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
-| market_pair | String Array |  |
-
-    {
-        "market_pair":["BTC/TWD","ETH/TWD","USDT/TWD","USDC/TWD"]
-    }
-
+| symbol | String|  |
+| base | String| gmt/usdt, base is btc |
+| quote | String| gmt/usdt, quote is gmt |
+| basePrecision | String|  |
+| quotePrecision | String|  |
+| minLimitBaseAmount | String|  |
+| maxLimitBaseAmount | String|  |
+| minMarketBuyQuoteAmount | String|  |
+| maintain | Boolean| under maintainence or not |
+| orderBookQuotePrecision | String|  |
+```json=
+    {"symbol":"gmt_usdt","base":"gmt","quote":"usdt","basePrecision":"8",
+     "quotePrecision":"5","minLimitBaseAmount":"0.1","maxLimitBaseAmount":"480286",
+     "minMarketBuyQuoteAmount":"10","maintain":false,
+     "orderBookQuotePrecision":"5"}
+```
 # Oapi API - Order Books
     GET https://ace.io/polarisex/oapi/list/orderBooks/<currency_name>/<basecurrency_name>
 ### Response:
