@@ -148,7 +148,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | maintain | Boolean| under maintainence or not |
 | orderBookQuotePrecision | String|  |
 ```json=
-    {"symbol":"gmt_usdt","base":"gmt","quote":"usdt","basePrecision":"8",
+    {"symbol":"BTC/USDT","base":"gmt","quote":"usdt","basePrecision":"8",
      "quotePrecision":"5","minLimitBaseAmount":"0.1","maxLimitBaseAmount":"480286",
      "minMarketBuyQuoteAmount":"10","maintain":false,
      "orderBookQuotePrecision":"5"}
