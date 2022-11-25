@@ -132,7 +132,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
      }
 ```
 # Oapi API - Market Pair
-    GET https://ace.io/polarisex/oapi/list/marketPair
+    GET https://ace.io/polarisex/oapi/v2/list/marketPair
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
