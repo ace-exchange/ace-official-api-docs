@@ -122,7 +122,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | base_volume | Float |  |
 | last_price | Float |  |
 | quote_volume | Float |  |
-
+```json=
     {
         "BTC/USDT":{
             "base_volume":229196.34035399999,
@@ -130,8 +130,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
             "quote_volume":19.2909
         }
      }
-
-
+```
 # Oapi API - Market Pair
     GET https://ace.io/polarisex/oapi/list/marketPair
 ### Response:
@@ -156,6 +155,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 # Oapi API - Order Books
     GET https://ace.io/polarisex/oapi/list/orderBooks/<currency_name>/<basecurrency_name>
 ### Response:
+```json=
     {
         "market_pair":"BTC/TWD",
         "orderbook": {
@@ -181,8 +181,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
           ]
         }
     }
-
-
+```
 # Open API - Account Balance
     POST https://ace.io/polarisex/open/v1/coin/customerAccount
 ### Parameters:
@@ -195,7 +194,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | securityKey | String | YES |
 
 ### Response:
-
+```json=
     {
       "attachment":[
         {
@@ -210,7 +209,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
       "message":null,
       "parameters":null
     }
-
+```
 # Open API - Kline/Candlestick data
     POST https://ace.io/polarisex/open/v1/kline/getKlineMin
 ### Parameters:
@@ -226,7 +225,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | limit | INT | NO | 1~2000
 
 ### Response:
-
+```json=
     {
         "changeRate": 0,
         "closePrice": 101000.0,
@@ -237,7 +236,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
         "current": 101000.0,
         "createTime": "2019-11-08 14:49:00"
     }
-
+```
 # Open API - New Order
     POST https://ace.io/polarisex/open/v1/order/order
 
@@ -245,7 +244,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
 | baseCurrencyId | INT | YES |
-| currencyId | INT | YES |
+| quuoteCurrencyId | INT | YES |
 | buyOrSell | INT | YES | 1 Buy;2 Sell |
 | price | FLOAT | YES |
 | num | FLOAT | YES |
@@ -258,14 +257,14 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | fdPassword | String | NO | Depends on user's security setting of fund password is required. |
 
 ### Response:
-
+```json=
     {
         "attachment": "15697850529570392100421100482693",
         "message": null,
         "parameters": null,
         "status": 200
     }
-
+```
 # Open API - Cancel Order
     POST https://ace.io/polarisex/open/v1/order/cancel
 ### Parameters:
@@ -279,7 +278,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | signKey | String | YES |
 
 ### Response:
-
+```json=
     {
         "attachment": 200,
         "message": null,
@@ -295,6 +294,7 @@ OR
         "parameters": null,
         "status": 2061
     }
+```
 
 # Open API - Order List
     POST https://ace.io/polarisex/open/v1/order/getOrderList
@@ -316,7 +316,7 @@ OR
 | ---- | ---- | ---- |
 | status | INT | 0 unsettled; 1 partial; 2 fill |
 | buyOrSell | INT | 1 Buy; 2 Sell |
-
+```json=
     {
       "attachment": [
         {
@@ -344,7 +344,7 @@ OR
       "parameters": null,
       "status": 200
     }    
-
+```
 # Open API - Order Status
     POST https://ace.io/polarisex/open/v1/order/showOrderStatus
 ### Parameters:
@@ -362,7 +362,7 @@ OR
 | ---- | ---- | ---- |
 | status | INT | 0 unsettled; 1 partial; 2 fill |
 | buyOrSell | INT | 1 Buy; 2 Sell |
-
+```json=
     {
         "attachment": {
           "remainNum": "0.00000000",
@@ -383,7 +383,7 @@ OR
         "parameters": null,
         "status": 200
     }
-
+```
 # Open API - Order History
     POST https://ace.io/polarisex/open/v1/order/showOrderHistory
 ### Parameters:
@@ -401,7 +401,7 @@ OR
 | ---- | ---- | ---- |
 | status | INT | 0 unsettled; 1 partial; 2 fill |
 | buyOrSell | INT | 1 Buy; 2 Sell |
-
+```json=
     {
         "attachment": {
             "trades": [
@@ -442,3 +442,4 @@ OR
         "parameters": null,
         "status": 200
     }
+```
