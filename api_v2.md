@@ -247,15 +247,14 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | quoteCurrencyId | String | YES |
 | buyOrSell | INT | YES | 1 Buy;2 Sell |
 | price | String | YES |
-| num | String | No |
-| amount | String | No |
-| type | INT | YES | 1 limit order; 2 market order |
+| num | String | No | If order type is 2 |
+| amount | String | No | If order type is 3 |
+| type | INT | YES | 1. limit price order 2. num market order 3. price market order |
 | apiKey | STRING | YES |
 | securityKey | STRING | YES |
 | uid | STRING | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
-| fdPassword | String | NO | Depends on user's security setting of fund password is required. |
 
 ### Response:
 ```json=
