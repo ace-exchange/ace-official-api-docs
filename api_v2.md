@@ -248,10 +248,10 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | ---- | ---- | ---- | ---- |
 | baseCurrencyId | String | YES |
 | quoteCurrencyId | String | YES |
-| buyOrSell | INT | YES | 1 Buy;2 Sell |
+| buyOrSell | INT | YES | 1. Buy 2. Sell |
 | price | String | No | Only order type 1 need | 
-| num | String | No | If order type is 2 |
-| amount | String | No | If order type is 3 and buy |
+| num | String | No | If order type  2 |
+| amount | String | No | Only order type  3 and buy |
 | type | INT | YES | 1. limit price order 2. num market order 3. amount market order |
 | apiKey | STRING | YES |
 | securityKey | STRING | YES |
