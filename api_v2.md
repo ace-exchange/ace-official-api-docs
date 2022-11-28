@@ -153,7 +153,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
      "orderBookQuotePrecision":"5"}
 ```
 # Oapi API - Order Books
-    GET https://ace.io/polarisex/oapi/list/orderBooks/<currency_name>/<basecurrency_name>
+    GET https://ace.io/polarisex/oapi/list/orderBooks/<baseCurrency_name>/<quoteCurrency_name>
 ### Response:
 ```json=
     {
