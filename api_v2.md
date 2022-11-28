@@ -119,15 +119,16 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
-| base_volume | Float |  |
-| last_price | Float |  |
-| quote_volume | Float |  |
+| base_volume | String | 24hr volume |
+| last_price | String |  |
+| quote_volume | String | turnover |
+
 ```json=
     {
         "BTC/USDT":{
-            "base_volume":229196.34035399999,
-            "last_price":11881.06,
-            "quote_volume":19.2909
+            "base_volume": "229196.34035399999",
+            "last_price": "11881.06",
+            "quote_volume": "19.2909"
         }
      }
 ```
