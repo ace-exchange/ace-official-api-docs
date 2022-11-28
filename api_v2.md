@@ -213,7 +213,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 ```
 # Open API - Kline/Candlestick data
-    POST https://ace.io/polarisex/open/v1/kline/getKlineMin
+    POST https://ace.io/polarisex/open/v2/kline/getKlineMin
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -222,7 +222,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | signKey | String | YES |
 | apiKey | String | YES |
 | securityKey | String | YES |
-| tradeCurrencyId | INT | YES |
+| quoteCurrencyId | INT | YES |
 | baseCurrencyId | INT | YES |
 | limit | INT | NO | 1~2000
 
@@ -248,10 +248,10 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | baseCurrencyId | String | YES |
 | quoteCurrencyId | String | YES |
 | buyOrSell | INT | YES | 1 Buy;2 Sell |
-| price | String | YES |
+| price | String | No | Only order type 1 need | 
 | num | String | No | If order type is 2 |
-| amount | String | No | If order type is 3 |
-| type | INT | YES | 1. limit price order 2. num market order 3. price market order |
+| amount | String | No | If order type is 3 and buy |
+| type | INT | YES | 1. limit price order 2. num market order 3. amount market order |
 | apiKey | STRING | YES |
 | securityKey | STRING | YES |
 | uid | STRING | YES |
@@ -309,9 +309,9 @@ OR
 | apiKey | String | YES |
 | securityKey | String | YES |
 | baseCurrencyId | INT | NO |
-| tradeCurrencyId | INT | NO |
-| start | INT | NO | Default 1
-| size | INT | NO | 1-100 Default 10
+| quoteCurrencyId | INT | NO |
+| start | INT | NO | Default 1 |
+| size | INT | NO | 1-100 Default 10 |
 
 ### Response:
 | Name | Type | Description |
@@ -379,7 +379,6 @@ OR
           "orderTime": "2019-09-11 16:37:22.216",
           "price": "0.03096500",
           "averagePrice": "0.03096500",
-          "currencyId": 4,
           "status": 2
         },
         "message": null,
@@ -402,7 +401,7 @@ OR
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
-| status | INT | 0 unsettled; 1 partial; 2 fill |
+| status | INT | 0 unsettled 1 partial settled 2 settled 4. canceled 5. partial canceled |
 | buyOrSell | INT | 1 Buy; 2 Sell |
 ```json=
     {
