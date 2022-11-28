@@ -114,8 +114,8 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * APE=135
 * GMT=136
 
-# Oapi API - Trade Price
-    GET https://ace.io/polarisex/oapi/list/tradePrice
+# Oapi API - Trade Data
+    GET https://ace.io/polarisex/oapi/v2/list/tradePrice
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
@@ -267,7 +267,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 ```
 # Open API - Cancel Order
-    POST https://ace.io/polarisex/open/v1/order/cancel
+    POST https://ace.io/polarisex/open/v2/order/cancel
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -298,7 +298,7 @@ OR
 ```
 
 # Open API - Order List
-    POST https://ace.io/polarisex/open/v1/order/getOrderList
+    POST https://ace.io/polarisex/open/v2/order/getOrderList
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -325,10 +325,10 @@ OR
           "orderNo": "16113081376560890227301101413941",
           "orderTime": "2021-01-22 17:35:37",
           "orderTimeStamp": 1611308137656,
-          "baseCurrencyId": 1,
-          "baseCurrencyNameEn": "TWD",
-          "currencyId": 14,
-          "currencyNameEn": "USDT",
+          "baseCurrencyId": 2,
+          "baseCurrencyNameEn": "BTC",
+          "quoteCurrencyId": 14,
+          "quoteCurrencyNameEn": "USDT",
           "buyOrSell": "1",
           "num": "6.0000000000000000",
           "price": "32.5880000000000000",
@@ -347,7 +347,7 @@ OR
     }    
 ```
 # Open API - Order Status
-    POST https://ace.io/polarisex/open/v1/order/showOrderStatus
+    POST https://ace.io/polarisex/open/v2/order/showOrderStatus
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -371,10 +371,11 @@ OR
           "num": "0.85000000",
           "tradeNum": "0.85000000",
           "baseCurrencyId": 2,
-          "baseCurrencyName": "Bitcoin",
+          "baseCurrencyName": "BTC",
+          "quoteCurrencyId": 14,
+          "quoteCurrencyName": "USDT",
           "buyOrSell": 1,
           "orderTime": "2019-09-11 16:37:22.216",
-          "currencyName": "Ethereum",
           "price": "0.03096500",
           "averagePrice": "0.03096500",
           "currencyId": 4,
@@ -386,7 +387,7 @@ OR
     }
 ```
 # Open API - Order History
-    POST https://ace.io/polarisex/open/v1/order/showOrderHistory
+    POST https://ace.io/polarisex/open/v2/order/showOrderHistory
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -429,10 +430,11 @@ OR
                 "num": "0.85000000",
                 "tradeNum": "0.85000000",
                 "baseCurrencyId": 2,
-                "baseCurrencyName": "Bitcoin",
+                "baseCurrencyName": "BTC",
+                "quoteCurrencyId": 14,
+                "quoteCurrencyName": "USDT",
                 "buyOrSell": 1,
                 "orderTime": "2019-09-11 16:37:22.216",
-                "currencyName": "Ethereum",
                 "price": "0.03096500",
                 "averagePrice": "0.03096500",
                 "currencyId": 4,
