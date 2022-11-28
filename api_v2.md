@@ -205,7 +205,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
           "amount": 6.896,
           "cashAmount": 6.3855,
           "uid": 123,
-          "currencyNameEn": "BTC"
+          "currencyName": "BTC"
         }
       ],
       "status": 200,
@@ -328,9 +328,9 @@ OR
           "orderTime": "2021-01-22 17:35:37",
           "orderTimeStamp": 1611308137656,
           "baseCurrencyId": 2,
-          "baseCurrencyNameEn": "BTC",
+          "baseCurrencyName": "BTC",
           "quoteCurrencyId": 14,
-          "quoteCurrencyNameEn": "USDT",
+          "quoteCurrencyName": "USDT",
           "buyOrSell": "1",
           "num": "6.0000000000000000",
           "price": "32.5880000000000000",
