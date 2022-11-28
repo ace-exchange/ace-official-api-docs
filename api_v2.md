@@ -147,10 +147,12 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | maintain | Boolean| under maintainence or not |
 | orderBookQuotePrecision | String|  |
 ```json=
-    {"symbol":"BTC/USDT","base":"gmt","quote":"usdt","basePrecision":"8",
+    {
+     "symbol":"BTC/USDT","base":"gmt","quote":"usdt","basePrecision":"8",
      "quotePrecision":"5","minLimitBaseAmount":"0.1","maxLimitBaseAmount":"480286",
      "minMarketBuyQuoteAmount":"10","maintain":false,
-     "orderBookQuotePrecision":"5"}
+     "orderBookQuotePrecision":"5"
+    }
 ```
 # Oapi API - Order Books
     GET https://ace.io/polarisex/oapi/list/orderBooks/<baseCurrency_name>/<quoteCurrency_name>
