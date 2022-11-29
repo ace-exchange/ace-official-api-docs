@@ -225,20 +225,30 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 | securityKey | String | YES |
 | quoteCurrencyId | INT | YES |
 | baseCurrencyId | INT | YES |
-| limit | INT | NO | 1~2000
+| startTime | Timestamp | NO |
+| endTime | Timestamp | NO |
+| limit | INT | NO | 1~2000 |
 
 ### Response:
 ```json=
-    {
-        "changeRate": 0,
-        "closePrice": 101000.0,
-        "lowPrice": 101000.0,
-        "highPrice": 101000.0,
-        "highPrice": 1573195740000L,
-        "openPrice": 101000.0,
-        "current": 101000.0,
-        "createTime": "2019-11-08 14:49:00"
-    }
+{
+    "attachment": [
+        {
+            "current": 490849.75,
+            "volume": 0,
+            "changeRate": 0,
+            "highPrice": 490849.75,
+            "lowPrice": 490849.75,
+            "openPrice": 490849.75,
+            "closePrice": 490849.75,
+            "createTime": "2022-11-29 15:26:00",
+            "currentTime": 1669706760000
+        }
+    ],
+    "message": null,
+    "parameters": null,
+    "status": 200
+}
 ```
 # Open API - New Order
     POST https://ace.io/polarisex/open/v2/order/order
