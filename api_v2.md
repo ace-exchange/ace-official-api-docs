@@ -279,7 +279,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 ```
 # Open API - Cancel Order
-    POST https://ace.io/polarisex/open/v2/order/cancel
+    POST https://ace.io/polarisex/open/v1/order/cancel
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
