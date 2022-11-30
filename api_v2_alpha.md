@@ -24,20 +24,11 @@ To prevent the request(s) from being tempered in the process of network transmis
 ### Kline/Candlestick chart intervals:
 m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * 1m
-* 5m
-* 10m
-* 30m
-* 1h
-* 2h
-* 4h
-* 8h
-* 12h
-* 1d
-* 1w
-* 1M
+
 ### Order side:
-* BUY
-* SELL
+* BUY = 1 
+* SELL =2
+
 ### Currency ID
 * TWD＝1
 * BTC＝2
