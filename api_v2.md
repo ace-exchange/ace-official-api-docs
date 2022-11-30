@@ -327,36 +327,36 @@ OR
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
-| status | INT | 0 unsettled; 1 partial; 2 fill |
-| buyOrSell | INT | 1 Buy; 2 Sell |
+| status | INT | 0. unsettled, 1. partial settled, 2. settled, 4. canceled, 5. partial canceled |
+| buyOrSell | INT | 1. Buy, 2. Sell |
 ```json=
-    {
-      "attachment": [
+{
+    "attachment": [
         {
-          "uid": 0,
-          "orderNo": "16113081376560890227301101413941",
-          "orderTime": "2021-01-22 17:35:37",
-          "orderTimeStamp": 1611308137656,
-          "baseCurrencyId": 2,
-          "baseCurrencyName": "BTC",
-          "quoteCurrencyId": 14,
-          "quoteCurrencyName": "USDT",
-          "buyOrSell": "1",
-          "num": "6.0000000000000000",
-          "price": "32.5880000000000000",
-          "remainNum": "2.0000000000000000",
-          "tradeNum": "4.0000000000000000",
-          "tradePrice": "31.19800000000000000000",
-          "tradeAmount": "124.7920000000000000",
-          "tradeRate": "0.66666666666666666667",
-          "status": 1,
-          "type": 1
+            "uid": 660,
+            "orderNo": "16697164905200431470851100284369",
+            "orderTime": "2022-11-29 18:08:06",
+            "orderTimeStamp": 1669716486980,
+            "quoteCurrencyId": 1,
+            "quoteCurrencyName": "TWD",
+            "baseCurrencyId": 2,
+            "baseCurrencyName": "BTC",
+            "buyOrSell": "1",
+            "num": "1.0000000000000000",
+            "price": "490849.7500000000000000",
+            "remainNum": "1.0000000000000000",
+            "tradeNum": "0.0000000000000000",
+            "tradePrice": "0.0000000000000000",
+            "tradeAmount": "0.000000000000000000000000000000",
+            "tradeRate": "0.00000000000000000000",
+            "status": 0,
+            "type": 1
         }
-      ],
-      "message": null,
-      "parameters": null,
-      "status": 200
-    }    
+    ],
+    "message": null,
+    "parameters": null,
+    "status": 200
+}
 ```
 # Open API - Order Status
     POST https://ace.io/polarisex/open/v2/order/showOrderStatus
@@ -373,8 +373,8 @@ OR
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
-| status | INT | 0 unsettled; 1 partial; 2 fill |
-| buyOrSell | INT | 1 Buy; 2 Sell |
+| status | INT | 0. unsettled, 1. partial settled, 2. settled, 4. canceled, 5. partial canceled |
+| buyOrSell | INT | 1. Buy, 2. Sell |
 ```json=
     {
         "attachment": {
@@ -412,8 +412,8 @@ OR
 ### Response:
 | Name | Type | Description |
 | ---- | ---- | ---- |
-| status | INT | 0 unsettled 1 partial settled 2 settled 4. canceled 5. partial canceled |
-| buyOrSell | INT | 1 Buy; 2 Sell |
+| status | INT | 0. unsettled, 1. partial settled, 2. settled, 4. canceled, 5. partial canceled |
+| buyOrSell | INT | 1. Buy, 2. Sell |
 ```json=
     {
         "attachment": {
