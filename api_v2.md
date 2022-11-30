@@ -186,7 +186,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
     }
 ```
 # Open API - Account Balance
-    POST https://ace.io/polarisex/open/v1/coin/customerAccount
+    POST https://ace.io/polarisex/open/v2/coin/customerAccount
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
