@@ -29,81 +29,71 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * BUY = 1 
 * SELL =2
 
-### Currency ID
-* TWD＝1
-* BTC＝2
-* ETH＝4
-* LTC＝7
-* XRP＝10
-* EOS＝11
-* XLM＝12
-* TRX＝13
-* USDT＝14
-* BNB＝17
-* BTT＝19
-* HWGC＝22
-* GTO＝54
-* USDC＝57
-* MOT＝58
-* UNI＝59
-* MOS＝65
-* MOCT＝66
-* PT＝67
-* DET＝70
-* SOLO＝71
-* QQQ＝72
-* APT＝73
-* HT＝74
-* UNI＝75
-* QTC＝76
-* MCO＝79
-* FTT＝81
-* BAAS＝83
-* OKB＝84
-* DAI＝85
-* MCC＝86
-* TACEX＝87
-* ACEX＝88
-* LINK＝89
-* DEC＝90
-* FANSI＝91
-* HWGC＝93
-* KNC＝94
-* COMP＝95
-* DS＝96
-* CRO＝97
-* CREAM=101
-* YFI=102
-* WNXM=103
-* MITH=104
-* DEAC=105
-* ENJ=107
-* ANKR=108
-* MANA=109
-* SXP=110
-* CHZ=111
-* DOT=112
-* CAKE=114
-* SHIB=115
-* DOGE=116
-* MATIC=117
-* WOO=119
-* SLP=120
-* AXS=121
-* ADA=122
-* QUICK=123
-* FTM=124
-* YGG=126
-* GALA=127
-* ILV=128
-* DYDX=129
-* SOL=130
-* SAND=131
-* AVAX=132
-* LOOKS=133
-* DEP=134
-* APE=135
-* GMT=136
+### Currency ID 
+#### Updated list is in Market Pair api.
+* TWD	1
+* BTC	2
+* ETH	4
+* LTC	7
+* XRP	10
+* TRX	13
+* USDT	14
+* BNB	17
+* BTTC	19
+* USDC	57
+* MOCT	66
+* DET	70
+* QQQ	72
+* HT	74
+* UNIC	75
+* QTC	76
+* FTT	81
+* BAAS	83
+* OKB	84
+* DAI	85
+* ACEX	88
+* LINK	89
+* DEC	90
+* HWGC	93
+* KNC	94
+* COMP	95
+* DS	96
+* CRO	97
+* CREAM	101
+* YFI	102
+* WNXM	103
+* MITH	104
+* SGB	106
+* ENJ	107
+* ANKR	108
+* MANA	109
+* SXP	110
+* CHZ	111
+* DOT	112
+* CAKE	114
+* SHIB	115
+* DOGE	116
+* MATIC	117
+* WOO	119
+* SLP	120
+* AXS	121
+* ADA	122
+* QUICK	123
+* FTM	124
+* YGG	126
+* GALA	127
+* ILV	128
+* DYDX	129
+* SOL	130
+* SAND	131
+* AVAX	132
+* LOOKS	133
+* APE	135
+* GMT	136
+* GST	139
+* TON	141
+* SSV	144
+* BUSD	145
 
 # Oapi API - Trade Data
     GET https://ace.io/polarisex/oapi/v2/list/tradePrice
