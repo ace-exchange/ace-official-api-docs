@@ -363,7 +363,7 @@ OR
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
-| orderId | STRING | YES |
+| orderNo | STRING | YES |
 | apiKey | STRING | YES |
 | securityKey | STRING | YES |
 | uid | STRING | YES |
@@ -376,33 +376,33 @@ OR
 | status | INT | 0. unsettled, 1. partial settled, 2. settled, 4. canceled, 5. partial canceled |
 | buyOrSell | INT | 1. Buy, 2. Sell |
 ```json=
-    {
-        "attachment": {
-          "remainNum": "0.00000000",
-          "orderNo": "15681910422154042100431100441305",
-          "num": "0.85000000",
-          "tradeNum": "0.85000000",
-          "baseCurrencyId": 2,
-          "baseCurrencyName": "BTC",
-          "quoteCurrencyId": 14,
-          "quoteCurrencyName": "USDT",
-          "buyOrSell": 1,
-          "orderTime": "2019-09-11 16:37:22.216",
-          "price": "0.03096500",
-          "averagePrice": "0.03096500",
-          "status": 2
-        },
-        "message": null,
-        "parameters": null,
-        "status": 200
-    }
+{
+    "attachment": {
+        "buyOrSell": 1,
+        "averagePrice": "490849.75000000",
+        "num": "0.00000000",
+        "orderTime": "2022-11-29 18:03:06.318",
+        "price": "490849.75000000",
+        "status": 4,
+        "tradeNum": "0.02697000",
+        "remainNum": "0.97303000",
+        "baseCurrencyId": 2,
+        "baseCurrencyName": "BTC",
+        "quoteCurrencyId": 1,
+        "quoteCurrencyName": "TWD",
+        "orderNo": "16697161898600391472461100244406"
+    },
+    "message": null,
+    "parameters": null,
+    "status": 200
+}
 ```
 # Open API - Order History
     POST https://ace.io/polarisex/open/v2/order/showOrderHistory
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
-| orderId | STRING | YES |
+| orderNo | STRING | YES |
 | apiKey | STRING | YES |
 | securityKey | STRING | YES |
 | uid | STRING | YES |
@@ -415,45 +415,36 @@ OR
 | status | INT | 0. unsettled, 1. partial settled, 2. settled, 4. canceled, 5. partial canceled |
 | buyOrSell | INT | 1. Buy, 2. Sell |
 ```json=
-    {
-        "attachment": {
-            "trades": [
-                {
-                    "amount": 0.0030965,
-                    "tradeNo": "15681920522485652100751000417788",
-                    "price": "0.03096500",
-                    "num": "0.10000000",
-                    "bi": 1,
-                    "time": "2019-09-11 16:54:12.248"
-                },
-                {
-                    "amount": 0.02322375,
-                    "tradeNo": "15682679767395912100751000467937",
-                    "price": "0.03096500",
-                    "num": "0.75000000",
-                    "bi": 1,
-                    "time": "2019-09-12 13:59:36.739"
-                }
-            ],
-            "order": {
-                "remainNum": "0.00000000",
-                "orderNo": "15681910422154042100431100441305",
-                "num": "0.85000000",
-                "tradeNum": "0.85000000",
-                "baseCurrencyId": 2,
-                "baseCurrencyName": "BTC",
-                "quoteCurrencyId": 14,
-                "quoteCurrencyName": "USDT",
-                "buyOrSell": 1,
-                "orderTime": "2019-09-11 16:37:22.216",
-                "price": "0.03096500",
-                "averagePrice": "0.03096500",
-                "currencyId": 4,
-                "status": 2
-            }
+{
+    "attachment": {
+        "order": {
+            "buyOrSell": 1,
+            "averagePrice": "491343.74000000",
+            "num": "1.00000000",
+            "orderTime": "2022-11-29 18:32:22.232",
+            "price": "491343.74000000",
+            "status": 1,
+            "tradeNum": "0.01622200",
+            "remainNum": "0.98377800",
+            "baseCurrencyId": 2,
+            "baseCurrencyName": "BTC",
+            "quoteCurrencyId": 1,
+            "quoteCurrencyName": "TWD",
+            "orderNo": "16697179457740441472471100214402"
         },
-        "message": null,
-        "parameters": null,
-        "status": 200
-    }
+        "trades": [
+            {
+                "price": "491343.74000000",
+                "num": "0.01622200",
+                "time": "2022-11-29 18:32:25.789",
+                "bi": 1,
+                "tradeNo": "16697179457897791471461000223437",
+                "amount": "7970.57815028"
+            }
+        ]
+    },
+    "message": null,
+    "parameters": null,
+    "status": 200
+}
 ```
