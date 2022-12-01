@@ -98,6 +98,11 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 # Oapi API - Trade Data
     GET https://ace.io/polarisex/oapi/v2/list/tradePrice
 ### Response:
+
+Key:
+symbol，format: <baseCurrencyName>/<quoteCurrencyName>
+ 
+Value:
 | Name | Type | Description |
 | ---- | ---- | ---- |
 | base_volume | String | 24hr volume |
