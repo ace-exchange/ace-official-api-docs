@@ -26,8 +26,8 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 * 1m
 
 ### Order side:
-* BUY = 1 
-* SELL =2
+* BUY  = 1 
+* SELL = 2
 
 ### Currency ID 
 #### Updated list is in Market Pair api.
