@@ -100,7 +100,11 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 ### Response:
 
 Key:
-symbol, format:<baseCurrencyName>/<quoteCurrencyName>
+
+```json=
+    symbol, format:<baseCurrencyName>/<quoteCurrencyName>
+
+```
  
 Value:
 | Name | Type | Description |
