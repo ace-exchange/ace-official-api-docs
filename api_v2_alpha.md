@@ -186,7 +186,6 @@ Value:
 | timeStamp | Long | YES |
 | signKey | String | YES |
 | apiKey | String | YES |
-| securityKey | String | YES |
 
 ### Response:
 ```json=
@@ -214,7 +213,6 @@ Value:
 | timeStamp | Long | YES |
 | signKey | String | YES |
 | apiKey | String | YES |
-| securityKey | String | YES |
 | quoteCurrencyId | INT | YES |
 | baseCurrencyId | INT | YES |
 | startTime | Timestamp | NO |
@@ -256,7 +254,6 @@ Value:
 | amount | String | No | Only order type  3 and buy |
 | type | INT | YES | 1. limit price order 2. num market order 3. amount market order |
 | apiKey | STRING | YES |
-| securityKey | STRING | YES |
 | uid | STRING | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
@@ -277,7 +274,6 @@ Value:
 | ---- | ---- | ---- | ---- |
 | orderNo | STRING | YES |
 | apiKey | STRING | YES |
-| securityKey | STRING | YES |
 | uid | STRING | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
@@ -310,7 +306,6 @@ OR
 | timeStamp | Long | YES |
 | signKey | String | YES |
 | apiKey | String | YES |
-| securityKey | String | YES |
 | baseCurrencyId | INT | NO |
 | quoteCurrencyId | INT | NO |
 | start | INT | NO | Default 1 |
@@ -357,7 +352,6 @@ OR
 | ---- | ---- | ---- | ---- |
 | orderNo | STRING | YES |
 | apiKey | STRING | YES |
-| securityKey | STRING | YES |
 | uid | STRING | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
@@ -396,7 +390,6 @@ OR
 | ---- | ---- | ---- | ---- |
 | orderNo | STRING | YES |
 | apiKey | STRING | YES |
-| securityKey | STRING | YES |
 | uid | STRING | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
