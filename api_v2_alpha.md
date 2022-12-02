@@ -16,7 +16,7 @@ To prevent the request(s) from being tempered in the process of network transmis
 
 * Three parameters are required to be uploaded, including ACE_SIGN, timestamp and phone number, all are involved in signature expect forsign.
 * Follow the rule to combine the parameters : `ACE_SIGN + timestamp + phone number`.
-* If your `phone number` is `0886123456789`, and the current thirteen-digit `timestamp` is `1234567890000`, then your will get `ACE_SIGN12345678900000886123456789`.
+* If your `phone number` is `886123456789`, and the current thirteen-digit `timestamp` is `1234567890000`, then your will get `ACE_SIGN12345678900000886123456789`.
 * Signing the obtained string with the MD5 digest algorithm results: `ca2aa2ff46d309ee9abeee2951ae8d27`. Place this result into `signKey` parameter.
 
 
