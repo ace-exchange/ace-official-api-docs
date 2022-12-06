@@ -148,11 +148,13 @@ Value:
     }
 ```
 # Oapi API - Order Books
-    GET https://ace.io/polarisex/oapi/list/orderBooks/<baseCurrency_name>/<quoteCurrency_name>
+    GET https://ace.io/polarisex/open/v2/public/list/orderBooks/<baseCurrency_name>/<quoteCurrency_name>
 ### Response:
 ```json=
     {
-        "market_pair":"BTC/TWD",
+        "symbol":"BTC/TWD",
+        "quoteCurrencyId": 1,
+        "baseCurrencyId":2,
         "orderbook": {
           "asks": [
             [
