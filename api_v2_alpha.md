@@ -12,12 +12,12 @@
 # Signing API Requests
 Important Note: Do not reveal your 'apiKey' and 'securityKey' to anyone. They are as important as your password.
 
-To prevent the request(s) from being tempered in the process of network transmission, signature authentication is required for your apiKey for the private interface, which guarantees that you are the source of the request(s). A legal ACE signature consists of parameters connected by “&”, and your securityKey, through `MD5` method. The signature needed to be placed in the parameter sign.
+To prevent the request(s) from being tempered in the process of network transmission, signature authentication is required for your apiKey for the private interface, which guarantees that you are the source of the request(s). A legal ACE signature consists of parameters connected by “&”, and your securityKey, through `SHA256` method. The signature needed to be placed in the parameter sign.
 
 * Three parameters are required to be uploaded, including ACE_SIGN, timestamp and phone number, all are involved in signature expect forsign.
-* Follow the rule to combine the parameters : `ACE_SIGN + timestamp + phone number`.
-* If your `phone number` is `0886123456789`, and the current thirteen-digit `timestamp` is `1234567890000`, then your will get `ACE_SIGN12345678900000886123456789`.
-* Signing the obtained string with the MD5 digest algorithm results: `ca2aa2ff46d309ee9abeee2951ae8d27`. Place this result into `signKey` parameter.
+* Follow the rule to combine the parameters : `ACE_SIGN + timestamp + phone number + Secret Key`.
+* If your `phone number` is `0886123456789`, the current `timestamp` is `1234567890000` and `Secret Key` is `xxxxxx`, then your will get `ACE_SIGN12345678900000886123456789xxxxxx`.
+* Signing the obtained string with the SHA256 algorithm results: `ca2aa2ff46d309ee9abeee2951ae8d27`. Place this result into `signKey` parameter.
 
 
 # ENUM definitions
