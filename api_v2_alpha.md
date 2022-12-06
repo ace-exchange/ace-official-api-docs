@@ -209,7 +209,6 @@ Value:
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
-| uid | Long | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
 | apiKey | String | YES |
@@ -254,7 +253,6 @@ Value:
 | amount | String | No | Only order type  3 and buy |
 | type | INT | YES | 1. limit price order 2. num market order 3. amount market order |
 | apiKey | STRING | YES |
-| uid | STRING | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
 
@@ -274,7 +272,6 @@ Value:
 | ---- | ---- | ---- | ---- |
 | orderNo | STRING | YES |
 | apiKey | STRING | YES |
-| uid | STRING | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
 
@@ -302,7 +299,6 @@ OR
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
-| uid | Long | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
 | apiKey | String | YES |
@@ -352,7 +348,6 @@ OR
 | ---- | ---- | ---- | ---- |
 | orderNo | STRING | YES |
 | apiKey | STRING | YES |
-| uid | STRING | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
 
@@ -390,7 +385,6 @@ OR
 | ---- | ---- | ---- | ---- |
 | orderNo | STRING | YES |
 | apiKey | STRING | YES |
-| uid | STRING | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
 
