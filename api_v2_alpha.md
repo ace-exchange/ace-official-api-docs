@@ -310,7 +310,7 @@ OR
 | baseCurrencyId | INT | NO |
 | quoteCurrencyId | INT | NO |
 | start | INT | NO | Default 1 |
-| size | INT | NO | 1-100 Default 10 |
+| size | INT | NO | 1-500 Default 10 |
 
 ### Response:
 | Name | Type | Description |
