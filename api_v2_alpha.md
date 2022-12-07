@@ -2,7 +2,7 @@
 # Version 2 General API Information (still on development)
 * All endpoints return either a JSON object or array.
 * All time and timestamp related fields are in milliseconds.
-* For GET endpoints, parameters must be sent as a query string.
+* For GET endpoints, parameters must be sent as .
 * For Post endpoints, parameters format is  x-www-form-urlencoded.
 * Parameters may be sent in any order.
 * Two kinds of api:\
