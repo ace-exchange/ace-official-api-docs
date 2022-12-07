@@ -15,11 +15,11 @@ Important Note: Do not reveal your 'apiKey' and 'securityKey' to anyone. They ar
 To prevent the request(s) from being tempered in the process of network transmission, signature authentication is required for your apiKey for the private interface, which guarantees that you are the source of the request(s).And your secretKey, through `SHA256` method. The signature needed to be placed in the parameter sign.
 
 * Three parameters are required to be uploaded, including ACE_SIGN, timestamp and phone number, all are involved in signature expect forsign.
-* Follow the rule to combine the parameters : `ACE_SIGN + timestamp + Secret Key + parameters values`.
-* If current `timestamp` is `1234567890000` and `Secret Key` is `xxxxxx`, then your will get `ACE_SIGN1234567890000xxxxxx`.
+* Follow the rule to combine the parameters : `ACE_SIGN  + Secret Key + parameters values`.
+* If  `Secret Key` is `xxxxxx`, then your will get `ACE_SIGNxxxxxx`.
 * Then if you hava parameters like: `apiKey=AAA&timeStamp=12121212&quoteCurrencyId=1&baseCurrencyId=2`, only get the values by definition order to get `AAA1212121212`.
-* Combine `ACE_SIGN1234567890000xxxxxx` + `AAA1212121212` to get `ACE_SIGN1234567890000xxxxxxAAA1212121212`
-* Signing the obtained string with the `SHA256` algorithm results: `fbf86560f29564a5604d94b008fbae24e10d6a8054722890731574e662def5ea`. 
+* Combine `ACE_SIGNxxxxxx` + `AAA1212121212` to get `ACE_SIGNxxxxxxAAA1212121212`
+* Signing the obtained string with the `SHA256` algorithm results: `e265a45639d473add583fe58d448fa516550f7cb9428284c0909cfd3380dbed8`. 
 * Place this result into `signKey` parameter.
 
 
