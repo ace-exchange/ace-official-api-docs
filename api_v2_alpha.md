@@ -7,12 +7,12 @@
 * Parameters may be sent in any order.
 * Two kinds of api:\
   a. 'Oapi' apis can use directly.\
-  b. 'Open' apis require 'apiKey' and 'securityKey', can apply them in ACE web https://ace.io/.
+  b. 'Open' apis require 'apiKey' and 'secretKey', can apply them in ACE web https://ace.io/.
 
 # Signing API Requests
 Important Note: Do not reveal your 'apiKey' and 'securityKey' to anyone. They are as important as your password.
 
-To prevent the request(s) from being tempered in the process of network transmission, signature authentication is required for your apiKey for the private interface, which guarantees that you are the source of the request(s). A legal ACE signature consists of parameters connected by “&”, and your securityKey, through `SHA256` method. The signature needed to be placed in the parameter sign.
+To prevent the request(s) from being tempered in the process of network transmission, signature authentication is required for your apiKey for the private interface, which guarantees that you are the source of the request(s).And your secretKey, through `SHA256` method. The signature needed to be placed in the parameter sign.
 
 * Three parameters are required to be uploaded, including ACE_SIGN, timestamp and phone number, all are involved in signature expect forsign.
 * Follow the rule to combine the parameters : `ACE_SIGN + timestamp + Secret Key`.
