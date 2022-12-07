@@ -7,10 +7,10 @@
 * Parameters may be sent in any order.
 * Two kinds of api:\
   a. 'Oapi' apis can use directly.\
-  b. 'Open' apis require 'apiKey' and 'secretKey', can apply them in ACE web https://ace.io/.
+  b. 'Open' apis require `apiKey` and `secretKey`, can apply them in ACE web `https://ace.io/`.
 
 # Signing API Requests
-Important Note: Do not reveal your 'apiKey' and 'securityKey' to anyone. They are as important as your password.
+Important Note: Do not reveal your `apiKey` and `secretKey` to anyone. They are as important as your password.
 
 To prevent the request(s) from being tempered in the process of network transmission, signature authentication is required for your apiKey for the private interface, which guarantees that you are the source of the request(s).And your secretKey, through `SHA256` method. The signature needed to be placed in the parameter sign.
 
