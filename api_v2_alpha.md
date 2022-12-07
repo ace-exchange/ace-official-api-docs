@@ -5,7 +5,7 @@
 * For GET endpoints, parameters must be sent as a query string.
 * You may mix parameters between both the query string and request body if you wish to do so.
 * Parameters may be sent in any order.
-* Parameters format is  json.
+* Parameters format is  url parameters.
 * Two kinds of api:\
   a. 'Oapi' apis can use directly.\
   b. 'Open' apis require 'apiKey' and 'securityKey', can apply them in ACE web https://ace.io/.
