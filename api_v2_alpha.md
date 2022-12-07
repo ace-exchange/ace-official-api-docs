@@ -17,7 +17,13 @@ To prevent the request(s) from being tempered in the process of network transmis
 * Three parameters are required to be uploaded, including ACE_SIGN, timestamp and phone number, all are involved in signature expect forsign.
 * Follow the rule to combine the parameters : `ACE_SIGN + timestamp + Secret Key`.
 * If current `timestamp` is `1234567890000` and `Secret Key` is `xxxxxx`, then your will get `ACE_SIGN1234567890000xxxxxx`.
-* Signing the obtained string with the SHA256 algorithm results: `ca2aa2ff46d309ee9abeee2951ae8d27`. Place this result into `signKey` parameter.
+* Then if you hava parameters like: `apiKey=AAA&timeStamp=12121212&quoteCurrencyId=1&baseCurrencyId=2`, only get the values by definition order to get `AAA1212121212`.
+* Combine `ACE_SIGN1234567890000xxxxxx` + `AAA1212121212` to get `ACE_SIGN1234567890000xxxxxxAAA1212121212`
+* 
+* Signing the obtained string with the SHA256 algorithm results: `ca2aa2ff46d309ee9abeee2951ae8d27`. 
+* 
+* Place this result into `signKey` parameter.
+
 
 
 # ENUM definitions
