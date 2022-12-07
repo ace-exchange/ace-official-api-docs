@@ -184,7 +184,6 @@ Value:
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
-| uid | Long | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
 | apiKey | String | YES |
