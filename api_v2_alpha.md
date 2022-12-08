@@ -26,8 +26,18 @@ To prevent the request(s) from being tempered in the process of network transmis
 
 # ENUM definitions
 ### Kline/Candlestick chart intervals:
-m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
-* 1m
+* 1: 1 min
+* 5: 5 mins
+* 10: 10 mins
+* 30: 30 mins
+* 60: 1 hour
+* 120: 2 hours
+* 240: 4 hours
+* 480: 8 hours
+* 720: 12 hours
+* 24: 1 day
+* 70: 1 week
+* 31: 1 month
 
 ### Order side:
 * BUY  = 1 
