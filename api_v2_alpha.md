@@ -228,15 +228,15 @@ Value:
 {
     "attachment": [
         {
-            "current": 490849.75,
-            "volume": 0,
-            "changeRate": 0,
-            "highPrice": 490849.75,
-            "lowPrice": 490849.75,
-            "openPrice": 490849.75,
-            "closePrice": 490849.75,
-            "createTime": "2022-11-29 15:26:00",
-            "currentTime": 1669706760000
+            "current": "533501.38",
+            "volume": "0",
+            "changeRate": "0",
+            "highPrice": "533501.38",
+            "lowPrice": "533501.38",
+            "openPrice": "533501.38",
+            "closePrice": "533501.38",
+            "currentTime": 1670359560000,
+            "createTime": "2022-12-07 04:46:00"
         }
     ],
     "message": null,
