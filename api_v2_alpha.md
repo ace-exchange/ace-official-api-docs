@@ -210,7 +210,7 @@ Value:
     }
 ```
 # Open API - Kline/Candlestick data
-    POST https://ace.io/polarisex/open/v2/kline/getKlineMin
+    POST https://ace.io/polarisex/open/v2/kline/getKline
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -218,10 +218,12 @@ Value:
 | signKey | String | YES |
 | apiKey | String | YES |
 | quoteCurrencyId | INT | YES |
+| duration | INT | NO | please checkout duration enum|
 | baseCurrencyId | INT | YES |
 | startTime | Timestamp | NO |
 | endTime | Timestamp | NO |
-| limit | INT | NO | 1~2000 |
+| limit | INT | NO | 1~2000, default is 2000 |
+
 
 ### Response:
 ```json=
