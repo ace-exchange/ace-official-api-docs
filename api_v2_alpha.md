@@ -1,5 +1,5 @@
 
-# Version 2 General API Information (still on development)
+# Version 2 General API Information (still on development, will be released around at 12/15)
 * All endpoints return either a JSON object or array.
 * All time and timestamp related fields are in milliseconds.
 * For GET endpoints, parameters must be sent as .
@@ -124,8 +124,8 @@ Value:
 | Name | Type | Description |
 | ---- | ---- | ---- |
 | base_volume | String | 24hr volume |
-| last_price | String |  |
-| quote_volume | String | turnover |
+| last_price | String | the newest price |
+| quote_volume | String | 24hr turnover, the unit is base on the base currency |
 
 ```json=
     {
@@ -145,13 +145,13 @@ Value:
 | symbol | String|  |
 | base | String| gmt/usdt, base is btc |
 | quote | String| gmt/usdt, quote is gmt |
-| basePrecision | String|  |
-| quotePrecision | String|  |
-| minLimitBaseAmount | String|  |
-| maxLimitBaseAmount | String|  |
-| minMarketBuyQuoteAmount | String|  |
+| basePrecision | String| the precision of base |
+| quotePrecision | String| the precision of quote |
+| minLimitBaseAmount | String| the minimal amount of base |
+| maxLimitBaseAmount | String| the max amount of base |
+| minMarketBuyQuoteAmount | String|  the minimal amount of market buy order|
 | maintain | Boolean| under maintainence or not |
-| orderBookQuotePrecision | String|  |
+| orderBookQuotePrecision | String|  the precision of order book |
 
 ```json=
     {
