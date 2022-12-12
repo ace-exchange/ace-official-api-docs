@@ -162,36 +162,51 @@ Value:
     }
 ```
 # Oapi API - Order Books
-    GET https://ace.io/polarisex/open/v2/public/list/orderBooks/<baseCurrency_name>/<quoteCurrency_name>
+    GET https://ace.io/polarisex/open/v2/public/getOrderBook
+
+### Parameters:
+| Name | Type | Mandatory | Description |
+| ---- | ---- | ---- | ---- |
+| quoteCurrencyId | INT | YES |
+| baseCurrencyId | INT | YES |
+
 ### Response:
 ```json=
-    {
-        "symbol":"BTC/TWD",
-        "quoteCurrencyId": 1,
-        "baseCurrencyId":2,
-        "orderbook": {
-          "asks": [
+{
+    "attachment": {
+        "baseCurrencyId": "2",
+        "quoteCurrencyId": "14",
+        "baseCurrencyName": "BTC",
+        "quoteCurrencyName": "USDT",
+        "bids": [
             [
-                "0.449612",
-                "1800000"
+                "0.0009",
+                "19993.53"
             ],
             [
                 "0.001",
-                "1980000"
-            ]
-          ],
-          "bids": [
-            [
-                "0.017087",
-                "1165121.4"
+                "19675.33"
             ],
             [
-                "0.01",
-                "1165121.2"
+                "0.001",
+                "19357.13"
             ]
-          ]
-        }
-    }
+        ],
+        "asks": [
+            [
+                "0.001",
+                "20629.92"
+            ],
+            [
+                "0.001",
+                "20948.12"
+            ]
+        ]
+    },
+    "message": null,
+    "parameters": null,
+    "status": 200
+}
 ```
 # Open API - Account Balance
     POST https://ace.io/polarisex/open/v2/coin/customerAccount
@@ -227,8 +242,8 @@ Value:
 | timeStamp | Long | YES |
 | signKey | String | YES |
 | apiKey | String | YES |
-| quoteCurrencyId | INT | YES |
 | duration | INT | NO | please checkout duration enum|
+| quoteCurrencyId | INT | YES |
 | baseCurrencyId | INT | YES |
 | startTime | Timestamp | NO |
 | endTime | Timestamp | NO |
