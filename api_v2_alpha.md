@@ -275,12 +275,14 @@ Value:
 
 ### Response:
 ```json=
-    {
-        "attachment": "15697850529570392100421100482693",
-        "message": null,
-        "parameters": null,
-        "status": 200
-    }
+{
+    "attachment": {
+        "orderNo": "16708172598046170050801100274092"
+    },
+    "message": null,
+    "parameters": null,
+    "status": 200
+}
 ```
 # Open API - Cancel Order
     POST https://ace.io/polarisex/open/v1/order/cancel
@@ -439,6 +441,56 @@ OR
             }
         ]
     },
+    "message": null,
+    "parameters": null,
+    "status": 200
+}
+```
+
+# Open API - Trade List
+    POST https://ace.io/polarisex/open/v2/order/getTradeList
+### Parameters:
+| Name | Type | Mandatory | Description |
+| ---- | ---- | ---- | ---- |
+| timeStamp | Long | YES |
+| signKey | String | YES |
+| apiKey | String | YES |
+| baseCurrencyId | INT | NO |
+| quoteCurrencyId | INT | NO |
+| buyOrSell | INT | NO | 1. Buy, 2. Sell |
+| start | INT | NO | Default 1 |
+| size | INT | NO | 1-500 Default 10 |
+
+### Response:
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| status | INT | 0. unsettled, 1. partial settled, 2. settled, 4. canceled, 5. partial canceled |
+| buyOrSell | INT | 1. Buy, 2. Sell |
+```json=
+{
+    "attachment": [
+        {
+            "buyOrSell": 1,
+            "orderNo": "16708156853695560053601100247906",
+            "num": "1",
+            "price": "16895",
+            "orderAmount": "16895",
+            "tradeNum": "0.1",
+            "tradePrice": "16895",
+            "tradeAmount": "1689.5",
+            "fee": "0",
+            "feeSave": "0",
+            "status": 1,
+            "isSelf": false,
+            "tradeNo": "16708186395087940051961000274150",
+            "tradeTime": "2022-12-12 12:17:19",
+            "tradeTimestamp": 1670818639508,
+            "quoteCurrencyId": 14,
+            "quoteCurrencyName": "USDT",
+            "baseCurrencyId": 2,
+            "baseCurrencyName": "BTC"
+        }
+    ],
     "message": null,
     "parameters": null,
     "status": 200
