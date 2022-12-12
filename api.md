@@ -432,3 +432,55 @@ OR
         "parameters": null,
         "status": 200
     }
+    
+# Open API - Trade List
+POST https://ace.io/polarisex/open/v1/order/getTradeList
+### Parameters:
+| Name | Type | Mandatory | Description |
+| ---- | ---- | ---- | ---- |
+| apiKey | STRING | YES |
+| securityKey | STRING | YES |
+| uid | STRING | YES |
+| timeStamp | Long | YES |
+| signKey | String | YES |
+| currencyId | INT | NO |
+| baseCurrencyId | INT | NO |
+| buyOrSell | INT | NO | 1. Buy, 2. Sell |
+| start | INT | NO | Default 1 |
+| size | INT | NO | 1-500 Default 10 |
+
+### Response:
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| status | INT | 0. unsettled, 1. partial settled, 2. settled, 4. canceled, 5. partial canceled |
+| buyOrSell | INT | 1. Buy, 2. Sell |
+```json=
+{
+    "attachment": [
+        {
+            "buyOrSell": 1,
+            "orderNo": "16708216352834010055501100274708",
+            "num": "0.1119",
+            "price": "16886.99",
+            "orderAmount": "1889.654181",
+            "orderTime": "2022-12-12 13:07:15",
+            "orderTimeStamp": 1670821635667,
+            "tradeNum": "0.1",
+            "tradePrice": "16886.99",
+            "tradeAmount": "1688.699",
+            "baseCurrencyId": 14,
+            "baseCurrencyNameEn": "USDT",
+            "currencyId": 2,
+            "currencyNameEn": "BTC",
+            "fee": "0",
+            "feeSave": "0",
+            "status": 5,
+            "isSelf": false,
+            "tradeNo": "16708216356671640051961000264215"
+        }
+    ],
+    "message": null,
+    "parameters": null,
+    "status": 200
+}
+```
