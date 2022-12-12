@@ -207,11 +207,11 @@ Value:
     {
       "attachment":[
         {
-          "currencyId": 4,
-          "amount": 6.896,
-          "cashAmount": 6.3855,
-          "uid": 123,
-          "currencyName": "BTC"
+            "uid": 660,
+            "currencyId": 2,
+            "currencyName": "BTC",
+            "amount": "9999999982.01768559",
+            "cashAmount": "9999999982.01768559"
         }
       ],
       "status": 200,
@@ -433,7 +433,6 @@ OR
                 "price": "491343.74000000",
                 "num": "0.01622200",
                 "time": "2022-11-29 18:32:25.789",
-                "bi": 1,
                 "tradeNo": "16697179457897791471461000223437",
                 "amount": "7970.57815028"
             }
