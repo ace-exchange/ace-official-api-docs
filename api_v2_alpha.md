@@ -12,14 +12,14 @@
 # Signing API Requests
 Important Note: Do not reveal your `apiKey` and `secretKey` to anyone. They are as important as your password.
 
-To prevent the request(s) from being tempered in the process of network transmission, signature authentication is required for your apiKey for the private interface, which guarantees that you are the source of the request(s).And your secretKey, through `SHA256` method. The signature needed to be placed in the parameter sign.
+To prevent the request(s) from being tempered in the process of network transmission, signature authentication is required for your apiKey for the private interface, which guarantees that you are the source of the request(s). And your secretKey, through `SHA256` method. The signature needed to be placed in the parameter sign.
 
-* Three parameters are required to be uploaded, including ACE_SIGN, timestamp and phone number, all are involved in signature expect forsign.
+* Three parameters are required to be uploaded, including ACE_SIGN, timestamp, all are involved in signature expect for sign.
 * Follow the rule to combine the parameters : `ACE_SIGN  + Secret Key + parameters values`.
 * If  `Secret Key` is `xxxxxx`, then your will get `ACE_SIGNxxxxxx`.
-* Then if you hava parameters like: `apiKey=AAA&timeStamp=12121212&quoteCurrencyId=1&baseCurrencyId=2`, only get the values by definition order to get `AAA1212121212`.
-* Combine `ACE_SIGNxxxxxx` + `AAA1212121212` to get `ACE_SIGNxxxxxxAAA1212121212`
-* Signing the obtained string with the `SHA256` algorithm results: `e265a45639d473add583fe58d448fa516550f7cb9428284c0909cfd3380dbed8`. 
+* Then if you hava parameters like: `apiKey=AAA&timeStamp=1234567890000&quoteCurrencyId=1&baseCurrencyId=2`, only get the values by definition order to get `AAA211234567890000`.
+* Combine `ACE_SIGNxxxxxx` + `AAA211234567890000` to get `ACE_SIGNxxxxxxAAA211234567890000`
+* Signing the obtained string with the `SHA256` algorithm results: `e2b12164552386e873aaacd325d22adb878ec1f22147f3add5d0a5d1b8ab7274`. 
 * Place this result into `signKey` parameter.
 
 
@@ -282,11 +282,12 @@ Value:
 | buyOrSell | INT | YES | 1. Buy 2. Sell |
 | price | String | No | Only order type 1 need | 
 | num | String | No | If order type  2 |
-| amount | String | No | Only order type  3 and buy |
-| type | INT | YES | 1. limit price order 2. num market order 3. amount market order |
 | apiKey | STRING | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
+| type | INT | YES | 1. limit price order 2. num market order |
+<!-- | amount | String | No | Only order type  3 and buy | -->
+<!-- | type | INT | YES | 1. limit price order 2. num market order 3. amount market order | -->
 
 ### Response:
 ```json=
