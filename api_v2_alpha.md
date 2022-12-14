@@ -2,7 +2,7 @@
 # Version 2 General API Information (still on development, will be released around at 12/15)
 * All endpoints return either a JSON object or array.
 * All time and timestamp related fields are in milliseconds.
-* For GET endpoints, parameters must be sent as .
+* For GET endpoints, parameters must be sent as url parameters.
 * For Post endpoints, parameters format is  x-www-form-urlencoded.
 * Parameters may be sent in any order.
 * Two kinds of api:\
@@ -12,12 +12,12 @@
 # Signing API Requests
 Important Note: Do not reveal your `apiKey` and `secretKey` to anyone. They are as important as your password.
 
-To prevent the request(s) from being tempered in the process of network transmission, signature authentication is required for your apiKey for the private interface, which guarantees that you are the source of the request(s).And your secretKey, through `SHA256` method. The signature needed to be placed in the parameter sign.
+To prevent the request(s) from being tampered with during the process of network transmission, `secretKey` signature authentication via `SHA256` is required to guarantee that you are the source of the request(s). The signature needs to be placed in the url parameter.
 
-* Three parameters are required to be uploaded, including ACE_SIGN, timestamp and phone number, all are involved in signature expect forsign.
+* Three parameters are required, including `ACE_SIGN`, `timestamp` and `phone number`, all are involved in signature.
 * Follow the rule to combine the parameters : `ACE_SIGN  + Secret Key + parameters values`.
 * If  `Secret Key` is `xxxxxx`, then your will get `ACE_SIGNxxxxxx`.
-* Then if you hava parameters like: `apiKey=AAA&timeStamp=12121212&quoteCurrencyId=1&baseCurrencyId=2`, only get the values by definition order to get `AAA1212121212`.
+* Then if you have parameters like: `apiKey=AAA&timeStamp=12121212&quoteCurrencyId=1&baseCurrencyId=2`, only get the values with natural order to get `AAA1212121212`.
 * Combine `ACE_SIGNxxxxxx` + `AAA1212121212` to get `ACE_SIGNxxxxxxAAA1212121212`
 * Signing the obtained string with the `SHA256` algorithm results: `e265a45639d473add583fe58d448fa516550f7cb9428284c0909cfd3380dbed8`. 
 * Place this result into `signKey` parameter.
