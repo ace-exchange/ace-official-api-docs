@@ -116,8 +116,7 @@ To prevent the request(s) from being tempered in the process of network transmis
 Key:
 
 ```json=
-    symbol, format:<baseCurrencyName>/<quoteCurrencyName>
-
+    <baseCurrencyName>/<quoteCurrencyName>
 ```
  
 Value:
