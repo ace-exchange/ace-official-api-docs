@@ -148,16 +148,12 @@ Value:
 | quotePrecision | String| the precision of quote |
 | minLimitBaseAmount | String| the minimal amount of base |
 | maxLimitBaseAmount | String| the max amount of base |
-| minMarketBuyQuoteAmount | String|  the minimal amount of market buy order|
-| maintain | Boolean| under maintainence or not |
-| orderBookQuotePrecision | String|  the precision of order book |
+
 
 ```json=
     {
      "symbol":"BTC/USDT","base":"gmt","quote":"usdt","basePrecision":"8",
-     "quotePrecision":"5","minLimitBaseAmount":"0.1","maxLimitBaseAmount":"480286",
-     "minMarketBuyQuoteAmount":"10","maintain":false,
-     "orderBookQuotePrecision":"5"
+     "quotePrecision":"5","minLimitBaseAmount":"0.1","maxLimitBaseAmount":"480286"
     }
 ```
 # Oapi API - Order Books
