@@ -6,8 +6,8 @@
 * For Post endpoints, parameters format is  x-www-form-urlencoded.
 * Parameters may be sent in any order.
 * Two kinds of api:\
-  a. 'Oapi' apis can use directly.\
-  b. 'Open' apis require `apiKey` and `secretKey`, can apply them in ACE web `https://ace.io/`.
+  a. `Oapi` apis can be used directly without signature authentication.
+  b. `Open` apis require `apiKey` and `secretKey`, can apply them in ACE web `https://ace.io/`.
 
 # Signing API Requests
 Important Note: Do not reveal your `apiKey` and `secretKey` to anyone. They are as important as your password.
