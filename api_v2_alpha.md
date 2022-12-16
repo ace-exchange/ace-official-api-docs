@@ -152,8 +152,13 @@ Value:
 
 ```json=
     {
-     "symbol":"BTC/USDT","base":"gmt","quote":"usdt","basePrecision":"8",
-     "quotePrecision":"5","minLimitBaseAmount":"0.1","maxLimitBaseAmount":"480286"
+     "symbol":"BTC/USDT",
+     "base":"gmt",
+     "quote":"usdt",
+     "basePrecision":"8",
+     "quotePrecision":"5",
+     "minLimitBaseAmount":"0.1",
+     "maxLimitBaseAmount":"480286"
     }
 ```
 # Oapi API - Order Books
