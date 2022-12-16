@@ -114,10 +114,7 @@ To prevent the request(s) from being tampered with during the process of network
 ### Response:
 
 Key:
-
-```json=
-    <baseCurrencyName>/<quoteCurrencyName>
-```
+  `<baseCurrencyName>/<quoteCurrencyName>`
  
 Value:
 | Name | Type | Description |
@@ -171,7 +168,7 @@ Value:
 | baseCurrencyId | INT | YES |
 
 ### Response:
-`bids are buy orders, asks are sell orders. first value is volume and second value is price`
+    bids are buy orders, asks are sell orders. first value is volume and second value is price
 
 ```json=
 {
@@ -336,7 +333,7 @@ Value:
 | signKey | String | YES |
 
 ### Response:
-`if attachment is 200, it's success of  cancelling order.`
+    if attachment is 200, it's success of  cancelling order.
 
 ```json=
     {
