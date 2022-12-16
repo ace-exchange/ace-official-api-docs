@@ -173,7 +173,7 @@ Value:
 ### Response:
 `bids are buy orders, asks are sell orders. first value is volume and second value is price`
 
-``json=
+```json=
 {
     "attachment": {
         "baseCurrencyId": "2",
