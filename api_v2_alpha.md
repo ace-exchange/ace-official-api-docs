@@ -120,11 +120,11 @@ Key:
 ```
  
 Value:
-| Name | Type | Description |
-| ---- | ---- | ---- |
-| base_volume | String | 24hr volume |
-| last_price | String | the newest price |
-| quote_volume | String | 24hr turnover, the unit is base on the base currency |
+| Name | Type | Mandatory | Description |
+| ---- | ---- | ---- | ---- |
+| base_volume | String | No | 24hr volume |
+| last_price | String | No | the newest price |
+| quote_volume | String | No | 24hr turnover, the unit is base on the base currency |
 
 ```json=
     {
@@ -139,15 +139,15 @@ Value:
 # Oapi API - Market Pair
     GET https://ace.io/polarisex/oapi/v2/list/marketPair
 ### Response:
-| Name | Type | Description |
-| ---- | ---- | ---- |
-| symbol | String|  |
-| base | String| gmt/usdt, base is btc |
-| quote | String| gmt/usdt, quote is gmt |
-| basePrecision | String| the precision of base |
-| quotePrecision | String| the precision of quote |
-| minLimitBaseAmount | String| the minimal amount of base |
-| maxLimitBaseAmount | String| the max amount of base |
+| Name | Type | Mandatory | Description |
+| ---- | ---- |  ---- | ---- |
+| symbol | String| No |      |
+| base | String| No | gmt/usdt, base is btc |
+| quote | String| No |gmt/usdt, quote is gmt |
+| basePrecision | No|String| the precision of base |
+| quotePrecision | String| No| the precision of quote |
+| minLimitBaseAmount | String| No | the minimal amount of base |
+| maxLimitBaseAmount | String| No | the max amount of base |
 
 
 ```json=
