@@ -220,6 +220,14 @@ Value:
 | apiKey | String | YES |
 
 ### Response:
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| uid | INT | uid of ACE Exchange |
+| currencyId | INT |  |
+| currencyName | String |  |
+| amount | String |  |
+| cashAmount | String | available amount |
+
 ```json=
     {
       "attachment":[
@@ -253,6 +261,18 @@ Value:
 
 
 ### Response:
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| current | String | current price |
+| volume | String |  trade volume  of this line |
+| changeRate | String | change rate of this line|
+| highPrice | String |  high price of this line |
+| lowPrice | String | low price of this line |
+| openPrice | String | open price of this line |
+| closePrice | String | close price of this line |
+| currentTime | Int | current timestamp, the scale is second |
+| createTime | Int | create time, date string format|
+
 ```json=
 {
     "attachment": [
@@ -291,6 +311,10 @@ Value:
 | signKey | String | YES |
 
 ### Response:
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| orderNo | String | order number of created order |
+
 ```json=
 {
     "attachment": {
@@ -312,6 +336,8 @@ Value:
 | signKey | String | YES |
 
 ### Response:
+`if attachment is 200, it's success of  cancelling order.`
+
 ```json=
     {
         "attachment": 200,
