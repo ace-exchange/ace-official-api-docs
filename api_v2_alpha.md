@@ -158,7 +158,7 @@ Value:
        "maxLimitBaseAmount":"480286"
     }
 ```
-# Oapi API - Order Books
+# Open API - Order Books
     GET https://ace.io/polarisex/open/v2/public/getOrderBook
 
 ### Parameters:
@@ -166,6 +166,7 @@ Value:
 | ---- | ---- | ---- | ---- |
 | quoteCurrencyId | INT | YES |
 | baseCurrencyId | INT | YES |
+| depth | INT | NO | size of bids & asks, default: all |
 
 ### Response:
     bids are buy orders, asks are sell orders. first value is volume and second value is price
