@@ -3,48 +3,31 @@
 * All endpoints return either a JSON object or array.
 * All time and timestamp related fields are in milliseconds.
 * For GET endpoints, parameters must be sent as url parameters.
-* For Post endpoints, parameters format is  x-www-form-urlencoded.
+* For POST endpoints, parameters must be sent in the request body, with the header `Content-Type: application/x-www-form-urlencoded`.
 * Parameters may be sent in any order.
-* Two kinds of api:\
-  a. `Oapi` apis can be used directly without signature authentication.<br>
-  b. `Open` apis require `apiKey` and `secretKey`, can apply them in ACE web `https://ace.io/`.
-
+* There are two types of APIs:\
+  a. `Oapi` APIs: can be used directly without signature authentication.\
+  b. `Open` APIs: require `apiKey` and `secretKey`, which can be applied for at https://ace.io/.
+  
 # Signing API Requests
 Important Note: Do not reveal your `apiKey` and `secretKey` to anyone. They are as important as your password.
 
-To prevent the request(s) from being tampered with during the process of network transmission, `secretKey` signature authentication via `SHA256` is required to guarantee that you are the source of the request(s). The signature needs to be placed in the url parameter.
+To prevent the request(s) from being tampered with during the process of network transmission, `secretKey` signature authentication via `SHA256` is required to guarantee that you are the source of the request(s).
 
-* Three parameters are required, including `ACE_SIGN`, `timestamp` and `phone number`, all are involved in signature.
-* Follow the rule to combine the parameters : `ACE_SIGN  + Secret Key + parameters values`.
-* If  `Secret Key` is `xxxxxx`, then your will get `ACE_SIGNxxxxxx`.
-* Then if you have parameters like: `apiKey=AAA&timeStamp=12121212&quoteCurrencyId=1&baseCurrencyId=2`, only get the values with natural order to get `AAA1212121212`.
-* Combine `ACE_SIGNxxxxxx` + `AAA1212121212` to get `ACE_SIGNxxxxxxAAA1212121212`
-* Signing the obtained string with the `SHA256` algorithm results: `e265a45639d473add583fe58d448fa516550f7cb9428284c0909cfd3380dbed8`. 
-* Place this result into `signKey` parameter.
-
+Follow this rule to create the signature string: `ACE_SIGN` + `secret key` + `parameters values`.
+1. If your `secret key` is `xxx`, combine `ACE_SIGN` + `xxx`, to get `ACE_SIGNxxx`.
+2. If your `parameters` are `apiKey=ABC#2022&timeStamp=1671089108000&quoteCurrencyId=1&baseCurrencyId=2`, take only the values in natural order, to get `ABC#2022211671089108000`.
+3. Combine `ACE_SIGNxxx` + `ABC#2022211671089108000`, to get `ACE_SIGNxxxABC#2022211671089108000`
+4. Sign the string with `SHA256` to get `56c45e08e0e168e1bac13854f494f6009e17228c7da0024fea196bfcf3ba5ac0`. 
+5. Place this result into the `signKey` parameter.
 
 
-# ENUM definitions
-### Kline/Candlestick chart intervals:
-* 1: 1 min
-* 5: 5 mins
-* 10: 10 mins
-* 30: 30 mins
-* 60: 1 hour
-* 120: 2 hours
-* 240: 4 hours
-* 480: 8 hours
-* 720: 12 hours
-* 24: 1 day
-* 70: 1 week
-* 31: 1 month
-
-### Order side:
+### Order types:
 * BUY  = 1 
 * SELL = 2
 
-### Currency ID 
-#### Updated list is in Market Pair api.
+### Currency IDs
+#### Up to date list is in Market Pair api.
 * TWD	1
 * BTC	2
 * ETH	4
@@ -158,7 +141,7 @@ Value:
    "maxLimitBaseAmount":"480286"
 }
 ```
-# Oapi API - Order Books
+# Open API - Order Books
     GET https://ace.io/polarisex/open/v2/public/getOrderBook
 
 ### Parameters:
@@ -166,6 +149,7 @@ Value:
 | ---- | ---- | ---- | ---- |
 | quoteCurrencyId | INT | YES |
 | baseCurrencyId | INT | YES |
+| depth | INT | NO | size of bids & asks, default: all |
 
 ### Response:
     bids are buy orders, asks are sell orders. first value is volume and second value is price
@@ -243,6 +227,22 @@ Value:
 ```
 # Open API - Kline/Candlestick data
     POST https://ace.io/polarisex/open/v2/kline/getKline
+
+
+### Duration ENUM definitions:
+* 1: 1 min
+* 5: 5 mins
+* 10: 10 mins
+* 30: 30 mins
+* 60: 1 hour
+* 120: 2 hours
+* 240: 4 hours
+* 480: 8 hours
+* 720: 12 hours
+* 24: 1 day
+* 70: 1 week
+* 31: 1 month
+
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
@@ -301,8 +301,7 @@ Value:
 | buyOrSell | INT | YES | 1. Buy 2. Sell |
 | price | String | No | Only order type 1 need | 
 | num | String | No | If order type  2 |
-| amount | String | No | Only order type  3 and buy |
-| type | INT | YES | 1. limit price order 2. num market order 3. amount market order |
+| type | INT | YES | 1. limit price order 2. num market order |
 | apiKey | STRING | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
