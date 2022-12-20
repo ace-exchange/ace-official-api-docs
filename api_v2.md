@@ -1,5 +1,5 @@
 
-# Version 2 General API Information (still on development, will be released around at 12/15)
+# Version 2 General API Information
 * All endpoints return either a JSON object or array.
 * All time and timestamp related fields are in milliseconds.
 * For GET endpoints, parameters must be sent as url parameters.
