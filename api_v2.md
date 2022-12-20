@@ -124,13 +124,13 @@ Value:
 | quote_volume | String  | 24hr turnover, the unit is base on the base currency |
 
 ```json=
-    {
-        "BTC/USDT":{
-            "base_volume": "229196.34035399999",
-            "last_price": "11881.06",
-            "quote_volume": "19.2909"
-        }
-     }
+{
+    "BTC/USDT":{
+        "base_volume": "229196.34035399999",
+        "last_price": "11881.06",
+        "quote_volume": "19.2909"
+    }
+}
 ```
 
 # Oapi API - Market Pair
@@ -148,15 +148,15 @@ Value:
 
 
 ```json=
-    {
-       "symbol":"BTC/USDT",
-       "base":"gmt",
-       "quote":"usdt",
-       "basePrecision":"8",
-       "quotePrecision":"5",
-       "minLimitBaseAmount":"0.1",
-       "maxLimitBaseAmount":"480286"
-    }
+{
+   "symbol":"BTC/USDT",
+   "base":"gmt",
+   "quote":"usdt",
+   "basePrecision":"8",
+   "quotePrecision":"5",
+   "minLimitBaseAmount":"0.1",
+   "maxLimitBaseAmount":"480286"
+}
 ```
 # Oapi API - Order Books
     GET https://ace.io/polarisex/open/v2/public/getOrderBook
@@ -226,20 +226,20 @@ Value:
 | cashAmount | String | available amount |
 
 ```json=
+{
+  "attachment":[
     {
-      "attachment":[
-        {
-            "uid": 660,
-            "currencyId": 2,
-            "currencyName": "BTC",
-            "amount": "9999999982.01768559",
-            "cashAmount": "9999999982.01768559"
-        }
-      ],
-      "status": 200,
-      "message":null,
-      "parameters":null
+        "uid": 660,
+        "currencyId": 2,
+        "currencyName": "BTC",
+        "amount": "9999999982.01768559",
+        "cashAmount": "9999999982.01768559"
     }
+  ],
+  "status": 200,
+  "message":null,
+  "parameters":null
+}
 ```
 # Open API - Kline/Candlestick data
     POST https://ace.io/polarisex/open/v2/kline/getKline
@@ -336,21 +336,21 @@ Value:
     if attachment is 200, it's success of  cancelling order.
 
 ```json=
-    {
-        "attachment": 200,
-        "message": null,
-        "parameters": null,
-        "status": 200
-    }
+{
+    "attachment": 200,
+    "message": null,
+    "parameters": null,
+    "status": 200
+}
 
 OR
 
-    {
-        "attachment": null,
-        "message": "委託單已成交或已撤銷",
-        "parameters": null,
-        "status": 2061
-    }
+{
+    "attachment": null,
+    "message": "委託單已成交或已撤銷",
+    "parameters": null,
+    "status": 2061
+}
 ```
 
 # Open API - Order List
