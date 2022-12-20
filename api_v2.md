@@ -323,7 +323,7 @@ Value:
 }
 ```
 # Open API - Cancel Order
-    POST https://ace.io/polarisex/open/v1/order/cancel
+    POST https://ace.io/polarisex/open/v2/order/cancel
 ### Parameters:
 | Name | Type | Mandatory | Description |
 | ---- | ---- | ---- | ---- |
