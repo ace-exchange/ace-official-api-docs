@@ -122,8 +122,8 @@ Value:
 | Name | Type  | Description |
 | ---- | ---- | ---- |
 | symbol | String |      |
-| base | String | gmt/usdt, base is btc |
-| quote | String |gmt/usdt, quote is gmt |
+| base | String | gmt/usdt, base is gmt |
+| quote | String |gmt/usdt, quote is usdt |
 | basePrecision |String| the precision of base |
 | quotePrecision | String| the precision of quote |
 | minLimitBaseAmount | String | the minimal amount of base |
