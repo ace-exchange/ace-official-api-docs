@@ -123,7 +123,9 @@ Value:
 | ---- | ---- | ---- |
 | symbol | String |      |
 | base | String | gmt/usdt, base is gmt |
+| baseCurrencyId | String |  |
 | quote | String |gmt/usdt, quote is usdt |
+| quoteCurrencyId | String | |
 | basePrecision |String| the precision of base |
 | quotePrecision | String| the precision of quote |
 | minLimitBaseAmount | String | the minimal amount of base |
