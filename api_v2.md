@@ -23,7 +23,7 @@ Follow this rule to create the signature string: `ACE_SIGN` + `secret key` + `pa
 5. Place this result into the `signKey` parameter.
 
 ## Global Response
-Every `Open Api` has response header `RESPONSE_TIME` : `{{now timestamp}}`
+Every `Open Api` has response header `X-RESPONSE-TIME` : `{{now timestamp}}`
 
 
 ### Order types:
