@@ -21,6 +21,9 @@ Follow this rule to create the signature string: `ACE_SIGN` + `secret key` + `pa
 4. Sign the string with `SHA256` to get `56c45e08e0e168e1bac13854f494f6009e17228c7da0024fea196bfcf3ba5ac0`. 
 5. Place this result into the `signKey` parameter.
 
+# Global Response
+Every `Open Api` has response header `RESPONSE_TIME` : `{{now timestamp}}`
+
 
 ### Order types:
 * BUY  = 1 
