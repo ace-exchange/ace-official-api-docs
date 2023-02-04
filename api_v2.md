@@ -1,5 +1,6 @@
 
 # Version 2 General API Information
+
 * All endpoints return either a JSON object or array.
 * All time and timestamp related fields are in milliseconds.
 * For GET endpoints, parameters must be sent as url parameters.
@@ -9,7 +10,7 @@
   a. `Oapi` APIs: can be used directly without signature authentication.\
   b. `Open` APIs: require `apiKey` and `secretKey`, which can be applied for at https://ace.io/.
   
-# Signing API Requests
+## Signing API Requests
 Important Note: Do not reveal your `apiKey` and `secretKey` to anyone. They are as important as your password.
 
 To prevent the request(s) from being tampered with during the process of network transmission, `secretKey` signature authentication via `SHA256` is required to guarantee that you are the source of the request(s).
@@ -21,7 +22,7 @@ Follow this rule to create the signature string: `ACE_SIGN` + `secret key` + `pa
 4. Sign the string with `SHA256` to get `56c45e08e0e168e1bac13854f494f6009e17228c7da0024fea196bfcf3ba5ac0`. 
 5. Place this result into the `signKey` parameter.
 
-# Global Response
+## Global Response
 Every `Open Api` has response header `RESPONSE_TIME` : `{{now timestamp}}`
 
 
@@ -95,7 +96,7 @@ Every `Open Api` has response header `RESPONSE_TIME` : `{{now timestamp}}`
 * SSV	144
 * BUSD	145
 
-# Oapi API - Trade Data
+## Oapi API - Trade Data
     GET https://ace.io/polarisex/oapi/v2/list/tradePrice
 ### Response:
 
@@ -119,7 +120,7 @@ Value:
 }
 ```
 
-# Oapi API - Market Pair
+## Oapi API - Market Pair
     GET https://ace.io/polarisex/oapi/v2/list/marketPair
 ### Response:
 | Name | Type  | Description |
@@ -146,7 +147,7 @@ Value:
    "maxLimitBaseAmount":"480286"
 }
 ```
-# Open API - Order Books
+## Open API - Order Books
     GET https://ace.io/polarisex/open/v2/public/getOrderBook
 
 ### Parameters:
@@ -196,7 +197,7 @@ Value:
     "status": 200
 }
 ```
-# Open API - Account Balance
+## Open API - Account Balance
     POST https://ace.io/polarisex/open/v2/coin/customerAccount
 ### Parameters:
 | Name | Type | Mandatory | Description |
@@ -230,7 +231,7 @@ Value:
   "parameters":null
 }
 ```
-# Open API - Kline/Candlestick data
+## Open API - Kline/Candlestick data
     POST https://ace.io/polarisex/open/v2/kline/getKline
 
 
@@ -295,7 +296,7 @@ Value:
     "status": 200
 }
 ```
-# Open API - New Order
+## Open API - New Order
     POST https://ace.io/polarisex/open/v2/order/order
 
 ### Parameters:
@@ -326,7 +327,7 @@ Value:
     "status": 200
 }
 ```
-# Open API - Cancel Order
+## Open API - Cancel Order
     POST https://ace.io/polarisex/open/v2/order/cancel
 ### Parameters:
 | Name | Type | Mandatory | Description |
@@ -357,7 +358,7 @@ OR
 }
 ```
 
-# Open API - Order List
+## Open API - Order List
     POST https://ace.io/polarisex/open/v2/order/getOrderList
 ### Parameters:
 | Name | Type | Mandatory | Description |
@@ -404,7 +405,7 @@ OR
     "status": 200
 }
 ```
-# Open API - Order Status
+## Open API - Order Status
     POST https://ace.io/polarisex/open/v2/order/showOrderStatus
 ### Parameters:
 | Name | Type | Mandatory | Description |
@@ -441,7 +442,7 @@ OR
     "status": 200
 }
 ```
-# Open API - Order History
+## Open API - Order History
     POST https://ace.io/polarisex/open/v2/order/showOrderHistory
 ### Parameters:
 | Name | Type | Mandatory | Description |
@@ -490,7 +491,7 @@ OR
 }
 ```
 
-# Open API - Trade List
+## Open API - Trade List
     POST https://ace.io/polarisex/open/v2/order/getTradeList
 ### Parameters:
 | Name | Type | Mandatory | Description |
