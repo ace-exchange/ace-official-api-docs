@@ -307,7 +307,8 @@ Value:
 | buyOrSell | INT | YES | 1. Buy 2. Sell |
 | price | String | No | Only order type 1 need | 
 | num | String | No | If order type  2 |
-| type | INT | YES | 1. limit price order 2. num market order |
+| amount | String | No | Only order type  3 and buy |
+| type | INT | YES | 1. limit price order 2. num market order 3. amount market order |
 | apiKey | STRING | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
