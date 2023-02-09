@@ -10,6 +10,8 @@
   a. `Oapi` APIs: can be used directly without signature authentication.\
   b. `Open` APIs: require `apiKey` and `secretKey`, which can be applied for at https://ace.io/.
   
+* CCXT is our authorized SDK provider and you may access the KuCoin API through CCXT. For more information, please visit: https://ccxt.trade
+  
 ## Signing API Requests
 Important Note: Do not reveal your `apiKey` and `secretKey` to anyone. They are as important as your password.
 
