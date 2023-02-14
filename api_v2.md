@@ -27,6 +27,48 @@ Follow this rule to create the signature string: `ACE_SIGN` + `secret key` + `pa
 ## Global Response
 Every `Open Api` has response header `X-RESPONSE-TIME` : `{{now timestamp}}`
 
+## Python Example
+```python=
+import requests
+import time
+import hashlib
+
+# Replace with your api key
+api_key = 'your api key'
+# Replace with your security key
+security_key = 'your security key'
+
+request_params = {
+  'apiKey': api_key,
+  'timeStamp': int(time.time_ns() / 1000000),
+  'duration': 1,
+  'quoteCurrencyId': 1,
+  'baseCurrencyId': 2,
+  'startTime': None,
+  'endTime': None,
+  'limit': 10,
+}
+
+sign_key_string = 'ACE_SIGN'+ security_key
+
+# Generate signKey:
+# Step1: concat sorted request_params value string
+sorted_keys = sorted(request_params.keys())
+for key in sorted_keys:
+  value = request_params.get(key)
+  if value is not None:
+    sign_key_string = sign_key_string+str(value)
+
+# Step2: encoding sign_key_string by sha256
+sign_key = hashlib.sha256(sign_key_string.encode('utf-8')).hexdigest()
+# Step3: add sign_key to request_params
+request_params['signKey'] = sign_key
+
+get_price = requests.post("https://ace.io/polarisex/open/v2/kline/getKline",request_params)
+print(get_price.json())
+
+```
+
 
 ### Order types:
 * BUY  = 1 
