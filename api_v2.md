@@ -353,6 +353,8 @@ Value:
 | num | String | No | If order type  2 |
 | type | INT | YES | 1. limit price order 2. num market order |
 | customOrderId | String | NO | Any string of length up to 32 characters. |
+| amount | String | No | Only order type  3 and buy |
+| type | INT | YES | 1. limit price order 2. num market order 3. amount market order |
 | apiKey | String | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
