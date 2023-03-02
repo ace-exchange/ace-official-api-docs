@@ -351,9 +351,11 @@ Value:
 | buyOrSell | INT | YES | 1. Buy 2. Sell |
 | price | String | No | Only order type 1 need | 
 | num | String | No | If order type  2 |
+| type | INT | YES | 1. limit price order 2. num market order |
+| customOrderId | String | NO | Any string of length up to 32 characters. |
 | amount | String | No | Only order type  3 and buy |
 | type | INT | YES | 1. limit price order 2. num market order 3. amount market order |
-| apiKey | STRING | YES |
+| apiKey | String | YES |
 | timeStamp | Long | YES |
 | signKey | String | YES |
 
@@ -361,11 +363,13 @@ Value:
 | Name | Type | Description |
 | ---- | ---- | ---- |
 | orderNo | String | order number of created order |
+| customOrderId | String | custom order id. |
 
 ```json=
 {
     "attachment": {
-        "orderNo": "16708172598046170050801100274092"
+        "orderNo": "16708172598046170050801100274092",
+        "customOrderId": "axyz1234"
     },
     "message": null,
     "parameters": null,
@@ -442,7 +446,8 @@ OR
             "tradeAmount": "0.000000000000000000000000000000",
             "tradeRate": "0.00000000000000000000",
             "status": 0,
-            "type": 1
+            "type": 1,
+            "customOrderId": "axyz1234"
         }
     ],
     "message": null,
@@ -480,7 +485,8 @@ OR
         "baseCurrencyName": "BTC",
         "quoteCurrencyId": 1,
         "quoteCurrencyName": "TWD",
-        "orderNo": "16697161898600391472461100244406"
+        "orderNo": "16697161898600391472461100244406",
+        "customOrderId": "axyz1234"
     },
     "message": null,
     "parameters": null,
@@ -518,7 +524,8 @@ OR
             "baseCurrencyName": "BTC",
             "quoteCurrencyId": 1,
             "quoteCurrencyName": "TWD",
-            "orderNo": "16697179457740441472471100214402"
+            "orderNo": "16697179457740441472471100214402",        
+            "customOrderId": "axyz1234"
         },
         "trades": [
             {
@@ -577,7 +584,8 @@ OR
             "quoteCurrencyId": 14,
             "quoteCurrencyName": "USDT",
             "baseCurrencyId": 2,
-            "baseCurrencyName": "BTC"
+            "baseCurrencyName": "BTC",        
+            "customOrderId": "axyz1234"
         }
     ],
     "message": null,
