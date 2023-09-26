@@ -589,7 +589,7 @@ OR
             "baseCurrencyId": 2,
             "baseCurrencyName": "BTC",        
             "customOrderId": "axyz1234",
-            "isMaker": True,    //maker or taker
+            "isMaker": True,   //maker or taker
             
         }
     ],
