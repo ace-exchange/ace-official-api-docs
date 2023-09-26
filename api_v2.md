@@ -556,7 +556,6 @@ OR
 | buyOrSell | INT | NO | 1. Buy, 2. Sell |
 | start | INT | NO | Default 1 |
 | size | INT | NO | 1-500 Default 10 |
-| isSelf | BOOLEAN | NO | Default false |
 | startTime | TIMESTAMP | NO | |
 | startTradeNo | STRING | NO | TradeNo is linear, as like startTime, can search from startTradeNo |
 
