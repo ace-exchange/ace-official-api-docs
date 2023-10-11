@@ -1,5 +1,5 @@
 
-# General API Information
+# General API Information (will be deprecated soon, please transfer into V2 documentation)
 * All endpoints return either a JSON object or array.
 * All time and timestamp related fields are in milliseconds.
 * For GET endpoints, parameters must be sent as a query string.
