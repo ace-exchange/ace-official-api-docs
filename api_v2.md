@@ -19,7 +19,7 @@ To prevent the request(s) from being tampered with during the process of network
 
 Follow this rule to create the signature string: `ACE_SIGN` + `secret key` + `parameters values`.
 1. If your `secret key` is `xxx`, combine `ACE_SIGN` + `xxx`, to get `ACE_SIGNxxx`.
-2. If your `parameters` are `apiKey=ABC#2022&timeStamp=1671089108000&quoteCurrencyId=1&baseCurrencyId=2`, take the values in `apikey`、`baseCurrencyId`、`quoteCurrencyId`、`timeStamp` order, to get `ABC#2022211671089108000`.
+2. If your `parameters` are `apiKey=ABC#2022&timeStamp=1671089108000&quoteCurrencyId=1&baseCurrencyId=2`, take the values in `apikey`、`baseCurrencyId`、`quoteCurrencyId`、`timeStamp` natural alphabetic order, to get `ABC#2022211671089108000`.
 3. Combine `ACE_SIGNxxx` + `ABC#2022211671089108000`, to get `ACE_SIGNxxxABC#2022211671089108000`
 4. Sign the string with `SHA256` to get `56c45e08e0e168e1bac13854f494f6009e17228c7da0024fea196bfcf3ba5ac0`. 
 5. Place this result into the `signKey` parameter.
