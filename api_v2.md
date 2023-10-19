@@ -351,7 +351,7 @@ Value:
 | quoteCurrencyId | String | YES |
 | buyOrSell | INT | YES | 1. Buy 2. Sell |
 | price | String | No | Only order type 1 need | 
-| num | String | No | If order type  2 |
+| num | String | No | order type 1 & 2 |
 | customOrderId | String | NO | Any string of length up to 32 characters. |
 | amount | String | No | Only order type  3 and buy |
 | type | INT | YES | 1. limit price order 2. num market order 3. amount market order |
